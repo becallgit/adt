@@ -22,7 +22,7 @@
     rel="stylesheet" />
 
   <!-- Google Tag Manager -->
-  <script>
+  <!--<script>
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
@@ -36,7 +36,7 @@
       j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
       f.parentNode.insertBefore(j, f);
     })(window, document, "script", "dataLayer", "GTM-NBQ2FMNJ");
-  </script>
+  </script>-->
   <!-- End Google Tag Manager -->
 </head>
 
@@ -44,7 +44,7 @@
   <div class="hidden-xs" style="background: #000; position: fixed; right: 10px; top: 50%; z-index: 99999;border-radius:50px; padding: 5px 30px;">
     <div class="row">
       <div class="col-xs-6 text-center w-50 px-3 border-right">
-        <a href="tel:900 00 00 00">
+        <a href="tel:919443678">
           <img src="assets/img/telf.png" alt="" style="height: 25px"><br>
           <small class="text-white">Llámanos</small>
         </a>
@@ -62,7 +62,7 @@
       src="assets/img/agente-autorizado.png"
       alt="agente-autorizado"
       class="agente-autorizado" />
-    <a href="tel:900000000">
+    <a href="tel:919443678">
       <img
         src="assets/img/adt-boton-llamada.png"
         alt="adt-boton-llamada"
@@ -113,7 +113,7 @@
         <button onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('track', 'Lead');">Te llamamos GRATIS</button>
         <div class="checkbox-container">
           <input id="c2c-checkbox-banner" type="checkbox" style="width: auto" />
-          <span style="font-size: 12px; padding-left: 0.5rem">Acepto la Política de Privacidad</span>
+          <span style="font-size: 12px; padding-left: 0.5rem">Acepto la <span id="privacidad-modal-banner" style="cursor: pointer; text-decoration: underline; color: #245FA4;">Política de Privacidad</span></span>
         </div>
         <p id="c2c-form-msg-banner" class="c2c-form-msg">&nbsp;</p>
         <p class="dgp">
@@ -192,7 +192,7 @@
         </div>
       </div>
 
-      <button class="btn-protegete" data-click2call="1">PROTÉGETE DESDE HOY</button>
+      <button class="btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
     </div>
   </div>
 
@@ -240,7 +240,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="2" data-servicio="seguridad">PROTÉGETE AHORA</button>
+          <button class="serv-btn btn-protegete" data-click2call="3" data-servicio="seguridad">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -280,7 +280,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="3" data-servicio="seguridad+vigilancia">PROTÉGETE AHORA</button>
+          <button class="serv-btn btn-protegete" data-click2call="4" data-servicio="seguridad+vigilancia">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -320,7 +320,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="4" data-servicio="seguridad+videovigilancia+conectividad">PROTÉGETE AHORA</button>
+          <button class="serv-btn btn-protegete" data-click2call="5" data-servicio="seguridad+videovigilancia+conectividad">PROTÉGETE AHORA</button>
         </div>
       </div>
     </div>
@@ -356,7 +356,7 @@
           inteligente
         </li>
       </ul>
-      <button class="btn-protegete" data-click2call="5">INFÓRMATE AQUÍ</button>
+      <button class="btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
     </div>
   </div>
 
@@ -403,7 +403,7 @@
     <div class="hidden-lg social-media-footer">
       <div class="row">
         <div class="col-xs-6 text-center w-50 px-3 border-right">
-          <a href="tel:900 00 00 00">
+          <a href="tel:919443678">
             <img src="assets/img/telf.png" alt="" style="height: 25px"><br>
             <small class="text-white">Llámanos</small>
           </a>
@@ -424,7 +424,7 @@
         <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA</span>
       </div>
       <div>
-        <button class="btn-black btn-protegete" data-click2call="6" data-servicio="oferta_especial"><span>PROTÉGETE AHORA</span></button>
+        <button class="btn-black btn-protegete" data-click2call="7" data-servicio="oferta_especial"><span>PROTÉGETE AHORA</span></button>
       </div>
     </div>
     <div class="footer-top">
@@ -439,7 +439,7 @@
           <span id="cookies-modal-footer" style="cursor: pointer">Política de Cookies</span>
         </p>
       </div>
-      <a href="tel:900000000">
+      <a href="tel:919443678">
         <img
           src="assets/img/boton-footer.png"
           alt="Boton footer"
@@ -460,7 +460,7 @@
       <div style="padding: 0 50px;">
         <p style="text-align: center; font-size: 30px; font-weight: bold; color: #245fa4; margin-bottom: 0; line-height: 1.2;">
           ¡Tu seguridad ya! <br>
-          900 000 000
+          919443678
         </p>
         <label class="c2c-text" for="c2c-phone-modal" style="color: #000">
           <strong>¿Lo prefieres? Te llamamos</strong>
@@ -1394,10 +1394,12 @@
         responsive: {
           0: {
             items: 1,
-            stagePadding: 30,
+            stagePadding: 20,
             nav: false,
             mouseDrag: true,
             touchDrag: true,
+            loop: false,
+            center: false,
           },
           768: {
             items: 2,
