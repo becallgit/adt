@@ -111,6 +111,17 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                 resetFormC2c(type);
                 window.dataLayer = window.dataLayer || [];
                 dataLayer.push({ 'event': 'formSubmitOK' });
+                
+                // GTM LeadOfertaAlarma event
+                window.dataLayer.push({
+                    event: "LeadOfertaAlarma",
+                    leadInfo: {
+                        idform: docCookies.getItem('idform') || '',
+                        phone: telefono,
+                        servicio: docCookies.getItem('adt_servicio') || ''
+                    }
+                });
+                
                 window.uetq = window.uetq || [];
                 window.uetq.push({ 'ec': 'click2call', 'ea': 'send', 'el': 'conversion' });
                 
