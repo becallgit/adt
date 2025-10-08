@@ -75,63 +75,46 @@ function makeClick2Call(telefono, checked, type, click2callId) {
 
     if (is_mobile(telefono) || is_fijo(telefono)) {
         if (checked) {
-            let url = ('https:' == location.protocol ? 'https:' : 'http:') + '//backend.agrmediacion.com/es/api/send_click2call_adt?';
+            // MODO LOCAL: Simular respuesta del servidor sin hacer llamada real
+            console.log('MODO LOCAL: Simulando envío de teléfono:', telefono);
+            console.log('Servicio:', docCookies.getItem('adt_servicio') || '');
+            
+            // Simular delay de red
+            setTimeout(function() {
+                // Simular respuesta exitosa del servidor
+                let id = click2callId || docCookies.getItem('click2call');
+                window.modal_showed = true;
+                let respuesta = '<div id="enviado-ok-ctc' + id + '" class="c2c-formu-data p-5 col-xs-12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; position: relative;">' +
+                    '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp" style="position: absolute; top: 15px; right: 15px; cursor: pointer; font-size: 24px; color: #999; background: #f0f0f0; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; line-height: 1;">×</div>' +
+                    '<strong style="font-size: 24px; color: #245fa4; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</strong>' +
+                    '<p style="font-size: 16px; margin-bottom: 30px; color: #333;">Uno de nuestros asesores se pondrá en contacto contigo en breve.</p>' +
+                    '<div class="text-center"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" /></div>' +
+                    '</div>';
 
-            console.log('adId desde las cookies:', docCookies.getItem('adId'));
-
-            if (docCookies.hasItem('adt_fuente'))
-                url += 'fuente=' + docCookies.getItem('adt_fuente') + '&';
-            if (docCookies.hasItem('adt_campaign'))
-                url += 'campanaId=' + docCookies.getItem('adt_campaign') + '&';
-            if (docCookies.hasItem('gcadt_gclidlid'))
-                url += 'gclid=' + docCookies.getItem('adt_gclid') + '&';
-            if (docCookies.hasItem('adt_fclid'))
-                url += 'fclid=' + docCookies.getItem('adt_fclid') + '&';
-            if (docCookies.hasItem('adId'))
-                url += 'adId=' + docCookies.getItem('adId') + '&';
-
-
-            let servicio = docCookies.getItem('adt_servicio');
-
-            url += 'telefono=' + telefono + '&servicio=' + (servicio ? servicio : '');
-            $.ajax({
-                url: url,
-                type: 'GET',
-                success: function (data) {
-                    if (data.success) {
-                        let id = click2callId || docCookies.getItem('click2call');
-                        window.modal_showed = true;
-                        let respuesta = '<div id="enviado-ok-ctc' + id + '" class="c2c-formu-data p-5 col-xs-12">' +
-                            '<strong class="text-center mb-4">¡Gracias por confiar en nosotros!</strong>' +
-                            '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp"></div>' +
-                            '<p>Uno de nuestros asesores se pondrá en contacto contigo en breve.</p>' +
-                            '<div class="text-center pt-3"><img src="assets/img/Perfil completado 1.png" style="height: 120px" /></div>' +
-                            '</div>';
-
-                        if (!openCallCenter) {
-                            respuesta = '<div id="enviado-ok-ctc' + id + '" class="c2c-formu-data p-5 col-xs-12">' +
-                                '<strong class="text-center mb-4">¡Gracias por confiar en nosotros!</strong>' +
-                                '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp"></div>' +
-                                '<p>Nuestros agentes se pondrán en contacto contigo en nuestro horario de Lunes a Viernes de 9:00 a 21:00.</p>' +
-                                '<div class="text-center pt-3"><img src="assets/img/Perfil completado 1.png" style="height: 120px" /></div>' +
-                                '</div>';
-                        }
-
-                        $('#c2c-formu-resp' + type).css({ 'display': 'flex' });
-                        $('#c2c-formu-resp' + type).html(respuesta);
-                        resetFormC2c(type);
-                        window.dataLayer = window.dataLayer || [];
-                        dataLayer.push({ 'event': 'formSubmitOK' });
-                        window.uetq = window.uetq || [];
-                        window.uetq.push({ 'ec': 'click2call', 'ea': 'send', 'el': 'conversion' });
-                    } else {
-                        showErrorMsg(type, "Ocurrió un error. Vuelva a intentarlo más tarde.");
-                    }
-                },
-                error: function () {
-                    showErrorMsg(type, "Ocurrió un error. Vuelva a intentarlo más tarde.");
+                if (!openCallCenter) {
+                    respuesta = '<div id="enviado-ok-ctc' + id + '" class="c2c-formu-data p-5 col-xs-12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; position: relative;">' +
+                        '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp" style="position: absolute; top: 15px; right: 15px; cursor: pointer; font-size: 24px; color: #999; background: #f0f0f0; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; line-height: 1;">×</div>' +
+                        '<strong style="font-size: 24px; color: #245fa4; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</strong>' +
+                        '<p style="font-size: 16px; margin-bottom: 30px; color: #333;">Nuestros agentes se pondrán en contacto contigo en nuestro horario de Lunes a Viernes de 9:00 a 21:00.</p>' +
+                        '<div class="text-center"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" /></div>' +
+                        '</div>';
                 }
-            });
+
+                // Para el formulario principal (banner), reemplazar todo el contenido del CTA
+                if (type === '-banner') {
+                    $('.cta').html(respuesta);
+                } else {
+                    // Para modales, reemplazar todo el contenido del modal
+                    $('.data-box.c2c.modal-data').html(respuesta);
+                }
+                resetFormC2c(type);
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({ 'event': 'formSubmitOK' });
+                window.uetq = window.uetq || [];
+                window.uetq.push({ 'ec': 'click2call', 'ea': 'send', 'el': 'conversion' });
+                
+                console.log('MODO LOCAL: Formulario enviado exitosamente');
+            }, 1000); // Simular 1 segundo de delay
 
             function showErrorMsg(type, message) {
                 $('#c2c-form-msg' + type).html(message).show();
@@ -162,7 +145,23 @@ function resetFormC2c(type) {
 }
 
 function closeRespC2c() {
-    $('.c2c-formu-resp').hide()
+    // Ocultar cualquier mensaje de respuesta
+    $('.c2c-formu-resp').hide();
+    
+    // Si el mensaje está en el formulario principal, recargar la página
+    if ($('.cta').find('#enviado-ok-ctc').length > 0) {
+        location.reload();
+        return;
+    }
+    
+    // Si el mensaje está en un modal, cerrar el modal
+    if ($('.data-box.c2c.modal-data').find('#enviado-ok-ctc').length > 0) {
+        closeModal('c2c');
+        return;
+    }
+    
+    // Fallback: recargar la página si no se puede determinar la ubicación
+    location.reload();
 }
 
 function addMsgGtm(type) {
