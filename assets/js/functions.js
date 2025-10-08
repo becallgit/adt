@@ -88,7 +88,7 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                     '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp" style="position: absolute; top: 15px; right: 15px; cursor: pointer; font-size: 24px; color: #999; background: #f0f0f0; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; line-height: 1;">×</div>' +
                     '<strong style="font-size: 24px; color: #245fa4; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</strong>' +
                     '<p style="font-size: 16px; margin-bottom: 30px; color: #333;">Uno de nuestros asesores se pondrá en contacto contigo en breve.</p>' +
-                    '<div class="text-center"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" /></div>' +
+                    '<div class="text-center success-image-container"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" class="success-image" /></div>' +
                     '</div>';
 
                 if (!openCallCenter) {
@@ -96,7 +96,7 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                         '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp" style="position: absolute; top: 15px; right: 15px; cursor: pointer; font-size: 24px; color: #999; background: #f0f0f0; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; line-height: 1;">×</div>' +
                         '<strong style="font-size: 24px; color: #245fa4; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</strong>' +
                         '<p style="font-size: 16px; margin-bottom: 30px; color: #333;">Nuestros agentes se pondrán en contacto contigo en nuestro horario de Lunes a Viernes de 9:00 a 21:00.</p>' +
-                        '<div class="text-center"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" /></div>' +
+                        '<div class="text-center success-image-container"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" class="success-image" /></div>' +
                         '</div>';
                 }
 

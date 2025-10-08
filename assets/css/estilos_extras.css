@@ -1228,4 +1228,35 @@
     width: 100% !important;
     margin: 0 10px !important;
   }
+  
+  /* Imagen de éxito en móvil - ocupar todo el ancho */
+  .success-image {
+    width: 100vw !important;
+    height: auto !important;
+    max-width: none !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  /* Contenedor del mensaje en móvil - sin padding lateral */
+  .cta .c2c-formu-data {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+  
+  /* Contenedor de la imagen en móvil - sin padding */
+  .success-image-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    width: calc(100% + 40px) !important;
+  }
+  
 }

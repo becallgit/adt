@@ -22,25 +22,20 @@
     rel="stylesheet" />
 
   <!-- Google Tag Manager -->
-  <!--<script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        "gtm.start": new Date().getTime(),
-        event: "gtm.js",
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-NBQ2FMNJ");
-  </script>-->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T5QGTHD3');</script>
   <!-- End Google Tag Manager -->
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5QGTHD3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+   
   <div class="hidden-xs" style="background: #000; position: fixed; right: 10px; top: 50%; z-index: 99999;border-radius:50px; padding: 5px 30px;">
     <div class="row">
       <div class="col-xs-6 text-center w-50 px-3 border-right">
@@ -110,7 +105,7 @@
           Déjanos tu teléfono y nos ponemos en contacto contigo
         </p>
         <input type="tel" class="form-control" placeholder="Teléfono" id="c2c-phone-banner" pattern="[0-9]*" inputmode="numeric" required>
-        <button onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('track', 'Lead');">Te llamamos GRATIS</button>
+        <button onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1);">Te llamamos GRATIS</button>
         <div class="checkbox-container">
           <input id="c2c-checkbox-banner" type="checkbox" style="width: auto" />
           <span style="font-size: 12px; padding-left: 0.5rem">Acepto la <span id="privacidad-modal-banner" style="cursor: pointer; text-decoration: underline; color: #245FA4;">Política de Privacidad</span></span>
@@ -498,7 +493,7 @@
         <button
           id="enviar-c2c-modal"
           class="button-purple btn-black c2c-btn btn-medir position-relative w-100"
-          onclick="makeClick2Call($('#c2c-phone-modal').val(), $('#c2c-checkbox-modal').is(':checked'), '-modal', null); fbq('track', 'Lead');">
+          onclick="makeClick2Call($('#c2c-phone-modal').val(), $('#c2c-checkbox-modal').is(':checked'), '-modal', null);">
           <p class="mb-0">Te llamamos <strong>GRATIS</strong></p>
         </button>
         <div id="c2c-formu-resp-modal" class="c2c-formu-resp"></div>
