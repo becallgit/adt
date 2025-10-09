@@ -45,7 +45,7 @@
         </a>
       </div>
       <div class="col-xs-6 text-center w-50 px-3">
-        <a href="https://wa.me/34123456789" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/34694279761" target="_blank" rel="noopener noreferrer">
           <img src="assets/img/whatss.png" alt="" style="height: 25px"><br>
           <small class="text-white">Escríbenos</small>
         </a>
@@ -404,7 +404,7 @@
           </a>
         </div>
         <div class="col-xs-6 text-center w-50 px-3">
-          <a href="https://wa.me/34123456789" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/34694279761" target="_blank" rel="noopener noreferrer">
             <img src="assets/img/whatss.png" alt="" style="height: 25px"><br>
             <small class="text-white">Escríbenos</small>
           </a>
