@@ -1259,10 +1259,10 @@
     width: calc(100% + 40px) !important;
   }
   
-  /* Social media footer dinámico en móvil */
+  /* Social media footer fijo al final en móvil */
   .social-media-footer {
     position: fixed !important;
-    bottom: 425px !important;
+    bottom: 10px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: auto !important;
@@ -1270,18 +1270,14 @@
     z-index: 1000 !important;
     border-radius: 50px !important;
     padding: 5px 30px !important;
-    transition: bottom 0.3s ease !important;
     margin: 0 !important;
     top: auto !important;
     right: auto !important;
   }
   
-  .social-media-footer.scroll-up {
-    bottom: 20px !important;
-  }
-  
-  .social-media-footer.scroll-down {
-    bottom: 425px !important;
+  /* Footer más largo en móvil para dar espacio al elemento fijo */
+  .footer {
+    padding-bottom: 100px !important;
   }
   
 }

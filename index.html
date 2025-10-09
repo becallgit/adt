@@ -1462,42 +1462,6 @@
             openModal('c2c');
         });
     });
-    
-    // Control dinámico del social media footer en móvil
-    let lastScrollTop = 0;
-    let ticking = false;
-    
-    function updateSocialFooter() {
-      const socialFooter = document.querySelector('.social-media-footer');
-      if (!socialFooter) return;
-      
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
-      if (scrollTop > lastScrollTop) {
-        // Scrolling hacia abajo - mantener sobre la oferta
-        socialFooter.classList.remove('scroll-up');
-        socialFooter.classList.add('scroll-down');
-      } else {
-        // Scrolling hacia arriba - ir al final
-        socialFooter.classList.remove('scroll-down');
-        socialFooter.classList.add('scroll-up');
-      }
-      
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      ticking = false;
-    }
-    
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateSocialFooter);
-        ticking = true;
-      }
-    }
-    
-    // Solo aplicar en móvil
-    if (window.innerWidth <= 768) {
-      window.addEventListener('scroll', requestTick);
-    }
   </script>
 </body>
 
