@@ -92,7 +92,7 @@
         <img src="assets/img/oferta-ADT.png" alt="oferta-ADT" />
       </div>
 
-      <div class="cta">
+      <div class="cta" id="formulario-principal">
         <img
           src="assets/img/formulario-adt.png"
           alt="Formulario adt"
@@ -105,7 +105,7 @@
           Déjanos tu teléfono y nos ponemos en contacto contigo
         </p>
         <input type="tel" class="form-control" placeholder="Teléfono" id="c2c-phone-banner" pattern="[0-9]*" inputmode="numeric" required>
-        <button onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1);">Te llamamos GRATIS</button>
+        <button onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-header-form'});">Te llamamos GRATIS</button>
         <div class="checkbox-container">
           <input id="c2c-checkbox-banner" type="checkbox" style="width: auto" />
           <span style="font-size: 12px; padding-left: 0.5rem">Acepto la <span id="privacidad-modal-banner" style="cursor: pointer; text-decoration: underline; color: #245FA4;">Política de Privacidad</span></span>
@@ -165,7 +165,7 @@
           </div>
           <h4>Instalación profesional</h4>
           <p>Nuestros técnicos dejan tu hogar protegido desde el primer día.</p>
-          <span class="destacado">Te aseguramos el mejor mantenimiento</span>
+          <span class="destacado">Instalación rápida, segura y garantizada</span>
         </div>
         <div class="card">
           <div class="card-icon">
@@ -187,7 +187,7 @@
         </div>
       </div>
 
-      <button class="btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
+      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-beneficios-form'});" class="btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
     </div>
   </div>
 
@@ -235,7 +235,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="3" data-servicio="seguridad">PROTÉGETE AHORA</button>
+          <button class="serv-btn btn-protegete" data-click2call="3" data-servicio="servicio2">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -275,7 +275,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="4" data-servicio="seguridad+vigilancia">PROTÉGETE AHORA</button>
+          <button class="serv-btn btn-protegete" data-click2call="4" data-servicio="servicio3">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -315,7 +315,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="5" data-servicio="seguridad+videovigilancia+conectividad">PROTÉGETE AHORA</button>
+          <button class="serv-btn btn-protegete" data-click2call="5" data-servicio="servicio4">PROTÉGETE AHORA</button>
         </div>
       </div>
     </div>
@@ -351,7 +351,7 @@
           inteligente
         </li>
       </ul>
-      <button class="btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
+      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
     </div>
   </div>
 
@@ -419,7 +419,7 @@
         <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA</span>
       </div>
       <div>
-        <button class="btn-black btn-protegete" data-click2call="7" data-servicio="oferta_especial"><span>PROTÉGETE AHORA</span></button>
+        <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
       </div>
     </div>
     <div class="footer-top">
@@ -1431,7 +1431,73 @@
         .addEventListener("input", function(e) {
           this.value = this.value.replace(/[^0-9]/g, ""); // Elimina cualquier carácter que no sea un número
         });
+        
+        // Sistema de tracking automático para botones "PROTÉGETE AHORA" con data-servicio
+        $('.btn-protegete[data-servicio]').on('click', function($event) {
+            // Determinar idform basado en el contexto del botón
+            var servicio = $event.target.dataset.servicio;
+            var buttonText = $event.target.textContent.trim();
+            var idform = '';
+            
+            // Botones "PROTÉGETE AHORA" con servicio específico
+            if (buttonText === 'PROTÉGETE AHORA' && servicio) {
+                idform = 'formulario-principal-' + servicio;
+            }
+            
+            // Guardar en cookies para el tracking
+            if (typeof docCookies !== 'undefined') {
+                docCookies.setItem('idform', idform);
+                docCookies.setItem('click2call', $event.target.dataset.click2call);
+                docCookies.setItem('adt_servicio', servicio);
+            }
+            
+            console.log('Botón clickeado, servicio:', servicio, 'idform:', idform);
+            
+            // Ejecutar tracking de Facebook
+            if (typeof fbq === 'function') {
+                fbq('trackCustom', 'LeadOfertaAlarma', {idform: idform});
+            }
+            
+            // Abrir modal para los botones de servicios
+            openModal('c2c');
+        });
     });
+    
+    // Control dinámico del social media footer en móvil
+    let lastScrollTop = 0;
+    let ticking = false;
+    
+    function updateSocialFooter() {
+      const socialFooter = document.querySelector('.social-media-footer');
+      if (!socialFooter) return;
+      
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > lastScrollTop) {
+        // Scrolling hacia abajo - mantener sobre la oferta
+        socialFooter.classList.remove('scroll-up');
+        socialFooter.classList.add('scroll-down');
+      } else {
+        // Scrolling hacia arriba - ir al final
+        socialFooter.classList.remove('scroll-down');
+        socialFooter.classList.add('scroll-up');
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      ticking = false;
+    }
+    
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateSocialFooter);
+        ticking = true;
+      }
+    }
+    
+    // Solo aplicar en móvil
+    if (window.innerWidth <= 768) {
+      window.addEventListener('scroll', requestTick);
+    }
   </script>
 </body>
 

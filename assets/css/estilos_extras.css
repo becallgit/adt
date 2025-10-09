@@ -1259,4 +1259,29 @@
     width: calc(100% + 40px) !important;
   }
   
+  /* Social media footer dinámico en móvil */
+  .social-media-footer {
+    position: fixed !important;
+    bottom: 425px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    min-width: 210px !important;
+    z-index: 1000 !important;
+    border-radius: 50px !important;
+    padding: 5px 30px !important;
+    transition: bottom 0.3s ease !important;
+    margin: 0 !important;
+    top: auto !important;
+    right: auto !important;
+  }
+  
+  .social-media-footer.scroll-up {
+    bottom: 20px !important;
+  }
+  
+  .social-media-footer.scroll-down {
+    bottom: 425px !important;
+  }
+  
 }
