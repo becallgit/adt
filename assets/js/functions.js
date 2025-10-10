@@ -198,6 +198,11 @@ function openModal(id) {
         $('.modal-back.' + id).addClass('modal-back-open');
         $('.' + id + '.modal-data').addClass('modal-data-open');
     }, 1);
+    
+    // Ocultar botón flotante en escritorio cuando se abre modal c2c
+    if (id === 'c2c' && $(window).width() > 768) {
+        $('.social-media-footer').hide();
+    }
 }
 
 function closeModal(id) {
@@ -209,6 +214,11 @@ function closeModal(id) {
         $('.modal-back.' + id).removeClass('modal-back-open');
     }, 300);
     $('.' + id + '.modal-data').removeClass('modal-data-open');
+    
+    // Mostrar botón flotante en escritorio cuando se cierra modal c2c
+    if (id === 'c2c' && $(window).width() > 768) {
+        $('.social-media-footer').show();
+    }
 }
 
 var horaInicioDiario = 9;

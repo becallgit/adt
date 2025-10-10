@@ -53,70 +53,115 @@
     </div>
   </div>
   <div class="header">
+    <!-- Versión Desktop -->
     <img
       src="assets/img/agente-autorizado.png"
       alt="agente-autorizado"
-      class="agente-autorizado" />
-    <a href="tel:919443678">
+      class="agente-autorizado hidden-xs" />
+    <a href="tel:919443678" class="hidden-xs">
       <img
         src="assets/img/adt-boton-llamada.png"
         alt="adt-boton-llamada"
-        class="adt-boton-llamada hidden-xs" />
+        class="adt-boton-llamada" />
     </a>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#000000"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2 hidden-lg">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M4 6l16 0" />
-      <path d="M4 12l16 0" />
-      <path d="M4 18l16 0" />
+    
+    <!-- Versión Móvil -->
+    <div class="header-mobile">
+      <div class="logo-adt-mobile">
+        <img
+          src="assets/img/Group 86.png"
+          alt="Group 86"
+          class="logo-adt-img" />
+      </div>
+      <a href="tel:919443678" class="btn-llamar-mobile">
+        <div class="btn-llamar-content">
+          <div class="btn-llamar-text">
+            <span class="llamanos-gratis">Llámanos Gratis</span>
+            <span class="numero-telefono">919 44 36 78</span>
+          </div>
+          <div class="btn-llamar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 
   <div class="hero">
+    <!-- Banner Desktop -->
     <img
       src="assets/img/alarmas-adt.png"
       alt="alarmas-adt"
       class="alarmas-adt hidden-xs" />
+    
+    <!-- Banner Móvil -->
+    <img
+      src="assets/img/alamar-movil.png"
+      alt="alamar-movil"
+      class="alamar-movil hidden-lg" />
 
     <div class="hero-content">
       <div class="offer">
-        <img src="assets/img/oferta-ADT.png" alt="oferta-ADT" />
+        <img src="assets/img/oferta-ADT.png" alt="oferta-ADT" class="hidden-sm hidden-xs" />
       </div>
 
-      <div class="cta" id="formulario-principal">
-        <img
-          src="assets/img/formulario-adt.png"
-          alt="Formulario adt"
-          class="hidden-xs" />
-        <img
-          src="assets/img/formulario-adt-2.png"
-          alt="Formulario adt"
-          class="hidden-lg" />
-        <p class="p1">
-          Déjanos tu teléfono y nos ponemos en contacto contigo
-        </p>
-        <input type="tel" class="form-control" placeholder="Teléfono" id="c2c-phone-banner" pattern="[0-9]*" inputmode="numeric" required>
-        <button onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-header-form'});">Te llamamos GRATIS</button>
-        <div class="checkbox-container">
-          <input id="c2c-checkbox-banner" type="checkbox" style="width: auto" />
-          <span style="font-size: 12px; padding-left: 0.5rem">Acepto la <span id="privacidad-modal-banner" style="cursor: pointer; text-decoration: underline; color: #245FA4;">Política de Privacidad</span></span>
+      <!-- CTA Principal -->
+      <div class="cta figma-form" id="formulario-principal">
+        <!-- Imagen solo en desktop -->
+        <img src="assets/img/formulario-adt.png" alt="Formulario adt" class="hidden-xs" />
+        
+        <!-- Título principal según Figma -->
+        <h2 class="figma-form-title">¡Contrata Ahora!</h2>
+        
+        <!-- Subtítulo según Figma -->
+        <p class="figma-form-subtitle">¿Lo prefieres? Te llamamos</p>
+        
+        <!-- Campo de teléfono según Figma -->
+        <div class="figma-form-field">
+          <input 
+            type="tel" 
+            class="figma-form-input" 
+            placeholder="Teléfono" 
+            id="c2c-phone-banner" 
+            pattern="[0-9]*" 
+            inputmode="numeric" 
+            required />
         </div>
-        <p id="c2c-form-msg-banner" class="c2c-form-msg">&nbsp;</p>
-        <p class="dgp">
+        
+        <!-- Checkbox de privacidad según Figma -->
+        <div class="figma-form-checkbox">
+          <input id="c2c-checkbox-banner" type="checkbox" class="figma-checkbox" />
+          <label for="c2c-checkbox-banner" class="figma-checkbox-label">
+            Acepto la <span id="privacidad-modal-banner" class="figma-privacy-link">Política de Privacidad</span>
+          </label>
+        </div>
+        
+        <!-- Botón principal según Figma -->
+        <button 
+          class="figma-form-button" 
+          style="margin-bottom: 15px !important;"
+          onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-header-form'});">
+          Te llamamos GRATIS
+        </button>
+        
+        <!-- Texto legal DGP según Figma -->
+        <p class="figma-form-legal">
           ADT es una empresa de Seguridad homologada, inscrita en el Registro
           de Seguridad de la DGP con el nº 2817
         </p>
+        
+        <!-- Mensajes de respuesta -->
+        <p id="c2c-form-msg-banner" class="c2c-form-msg">&nbsp;</p>
         <div id="c2c-formu-resp-banner" class="c2c-form-resp"></div>
       </div>
+      
+      <!-- Imagen CTA debajo del formulario solo en móvil -->
+      <img src="assets/img/cta.png" alt="CTA móvil" class="cta-mobile-image hidden-lg" />
+      
+      <!-- Imagen servicios con scroll solo en móvil -->
+      <img src="assets/img/scroll servicios.png" alt="Scroll Servicios" class="servicios-mobile-image hidden-lg" />
     </div>
   </div>
 
@@ -150,7 +195,8 @@
     <br />
     <br />
     <div class="container">
-      <div class="owl-carousel owl-loaded owl-drag owl-theme cards">
+      <!-- Desktop: Carrusel -->
+      <div class="owl-carousel owl-loaded owl-drag owl-theme cards hidden-xs">
         <div class="card">
           <div class="card-icon">
             <img src="assets/img/aviso-policia-adt-icon.png" alt="icono" />
@@ -187,7 +233,45 @@
         </div>
       </div>
 
-      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-beneficios-form'});" class="btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
+      <!-- Mobile: Sin carrusel -->
+      <div class="cards-mobile hidden-lg">
+        <div class="card">
+          <div class="card-icon">
+            <img src="assets/img/aviso-policia-adt-icon.png" alt="icono" />
+          </div>
+          <h4>Aviso Policía</h4>
+          <p>Aviso inmediato a policía en caso de intrusión.</p>
+          <span class="destacado">Siempre disponibles para tí</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="assets/img/instalacion-adt-icon.png" alt="icono" />
+          </div>
+          <h4>Instalación profesional</h4>
+          <p>Nuestros técnicos dejan tu hogar protegido desde el primer día.</p>
+          <span class="destacado">Instalación rápida, segura y garantizada</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="assets/img/smarth-arming-adt.png" alt="icono" />
+          </div>
+          <h4>Smart Arming</h4>
+          <p>
+            Tu alarma se conecta por las noches y desconecta por las mañanas.
+          </p>
+          <span class="destacado">Armado inteligente</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="assets/img/adt-help-icon.png" alt="icono" />
+          </div>
+          <h4>ADT Help</h4>
+          <p>Pide ayuda inmediata en caso de urgencia, estés dónde estés.</p>
+          <span class="destacado">Con nuestra AppSmart Security</span>
+        </div>
+      </div>
+
+      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-beneficios-form'});" class="btn-primary btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
     </div>
   </div>
 
@@ -198,7 +282,8 @@
   </div>
 
   <div class="servicios">
-    <div class="owl-carousel owl-loaded owl-drag owl-theme servicios-cards">
+    <!-- Desktop: Carrusel -->
+    <div class="owl-carousel owl-loaded owl-drag owl-theme servicios-cards hidden-xs">
       <!-- CARD 1 -->
       <div class="serv-card">
         <h3>SEGURIDAD</h3>
@@ -235,7 +320,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="3" data-servicio="servicio2">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio2">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -275,7 +360,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="4" data-servicio="servicio3">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio3">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -315,7 +400,131 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="serv-btn btn-protegete" data-click2call="5" data-servicio="servicio4">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio4">PROTÉGETE AHORA</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile: Sin carrusel -->
+    <div class="servicios-mobile hidden-lg" style="padding: 20px 7px !important; background-color: #F5F5F5 !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important; margin-top: -40px !important;">
+      <!-- CARD 1 -->
+      <div class="serv-card" style="width: 320px !important; height: 800px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+        <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">SEGURIDAD</h3>
+        <img
+          class="serv-photo"
+          src="assets/img/fondo-segurida.png"
+          alt="protección hogar" 
+          style="width: 100% !important; height: 180px !important; object-fit: cover !important; margin: 0 !important;" />
+        <div class="content" style="padding: 30px !important; text-align: left !important;">
+          <img
+            class="serv-icon"
+            src="assets/img/icono_seguridad.png"
+            alt="icono seguridad" />
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: 0 !important; line-height: 1.2 !important; font-size: 18px !important;">Tu hogar o negocio protegido 24/7 desde cualquier lugar</p>
+          <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Panel de
+              control inteligente
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Sensores
+              de apertura y detectores de movimiento
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Activación y desactivación desde app en tu móvil
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Detección de inhibición
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Mantenimiento remoto
+            </li>
+          </ul>
+          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio2">PROTÉGETE AHORA</button>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="serv-card">
+        <h3>SEGURIDAD Y VIGILANCIA</h3>
+        <img
+          class="serv-photo"
+          src="assets/img/fondo-vigilancia.png"
+          alt="protección negocio" />
+        <div class="content">
+          <img
+            class="serv-icon"
+            src="assets/img/camara-seguridad.icon.png"
+            alt="icono cámara" />
+          <p>Suma videointeligencia y controla tu casa en tiempo real.</p>
+          <ul class="serv-list">
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Video HD
+              en tiempo real
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Comunicación bidireccional
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Alertas
+              personalizadas
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Detección inteligente de movimiento
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
+              total desde cualquier lugar
+            </li>
+          </ul>
+          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio3">PROTÉGETE AHORA</button>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="serv-card">
+        <h3>SEGURIDAD/VIDEOVIGILANCIA/<br />CONECTIVIDAD</h3>
+        <img
+          class="serv-photo"
+          src="assets/img/fondo_domotica.png"
+          alt="ADT Help" />
+        <div class="content">
+          <img
+            class="serv-icon"
+            src="assets/img/adt_conectividad.png"
+            alt="icono help" />
+          <p>Disfruta de mayor comodidad en tu vivienda.</p>
+          <ul class="serv-list">
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
+              de iluminación inteligente
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Gestión de persianas y toldos
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
+              de climatización
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Gestión de electrodomésticos
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Escenas personalizadas
+            </li>
+          </ul>
+          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio4">PROTÉGETE AHORA</button>
         </div>
       </div>
     </div>
@@ -341,7 +550,7 @@
         <li>
           <img src="assets/img/adt-check-blanco.png" alt="check" />
           Programación de encentido y apagado de electrodomésticos
-        </li>
+0000        </li>
         <li>
           <img src="assets/img/adt-check-blanco.png" alt="check" /> Gestión
           centralizada en la app
@@ -351,7 +560,7 @@
           inteligente
         </li>
       </ul>
-      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
+      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
     </div>
   </div>
 
@@ -424,7 +633,7 @@
     </div>
     <div class="footer-top">
       <div class="logos-section">
-        <div class="logos">
+        <div class="logos">0
           <img src="assets/img/logo-becall.png" alt="logo becall" />
           <img src="assets/img/logo-adt-footer.png" alt="logo ADT" />
         </div>
@@ -445,22 +654,59 @@
 
   <div id="modal-c2c-cont" class="modal-cont">
     <div id="cierre-modal-c2c-back" class="modal-back btn-medir c2c"></div>
-    <div class="data-box c2c modal-data">
-      <div
-        id="cierre-modal-c2c-btn"
-        class="btn-close btn-close-white btn-close-modal btn-medir c2c"></div>
-      <p class="c2c-title">Instalación GRATUITA</p>
-      <img src="assets/img/OFERTA.png" alt="" style="width: 100%;">
-      <br>
-      <div style="padding: 0 50px;">
-        <p style="text-align: center; font-size: 30px; font-weight: bold; color: #245fa4; margin-bottom: 0; line-height: 1.2;">
-          ¡Tu seguridad ya! <br>
-          919443678
-        </p>
-        <label class="c2c-text" for="c2c-phone-modal" style="color: #000">
-          <strong>¿Lo prefieres? Te llamamos</strong>
-        </label>
-        <div class="row" style="color: #000">
+    <div class="data-box c2c modal-data figma-modal" style="background-color: #fff; border-radius: 25px; padding: 0; overflow: visible; width: 394px; height: auto; max-height: 90vh; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+      
+      <!-- Header negro con "Instalación GRATUITA" -->
+      <div class="modal-c2c-header" style="background-color: #000; color: white; padding: 10px; text-align: center; border-radius: 25px 25px 0 0; position: relative;">
+        <div
+          id="cierre-modal-c2c-btn"
+          class="btn-close btn-close-white btn-close-modal btn-medir c2c"
+          style="position: absolute; top: 8px; right: 8px; width: 18px; height: 18px; font-size: 18px; font-weight: bold;">×</div>
+        <p class="c2c-title" style="margin: 0; font-size: 18px; font-weight: bold; text-transform: uppercase; color: white; font-family: 'Roboto Condensed', sans-serif;">Instalación GRATUITA</p>
+      </div>
+      
+      <!-- Sección azul con precio -->
+      <div style="background-color: #245fa4; padding: 15px; position: relative;">
+        <!-- Precio principal -->
+        <div style="text-align: center; margin-bottom: 8px;">
+          <span style="font-size: 45px; font-weight: bold; color: white; line-height: 1; font-family: 'Roboto Condensed', sans-serif;">19</span>
+          <span style="font-size: 22px; font-weight: bold; color: white; vertical-align: top; font-family: 'Roboto Condensed', sans-serif;">,90 €/mes</span>
+          <span style="font-size: 18px; color: white; vertical-align: top; font-family: 'Roboto Condensed', sans-serif;">*</span>
+        </div>
+        
+        <!-- IVA incluido -->
+        <div style="text-align: center; margin-bottom: 8px;">
+          <span style="color: white; font-size: 12px; font-weight: bold; font-family: 'Roboto Condensed', sans-serif;">✓ IVA INCLUIDO</span>
+        </div>
+        
+        <!-- Línea separadora -->
+        <div style="border-top: 1px solid white; margin: 6px 0;"></div>
+        
+        <!-- Duración -->
+        <div style="text-align: center;">
+          <span style="color: white; font-size: 16px; font-weight: bold; text-transform: uppercase; font-family: 'Roboto Condensed', sans-serif;">DURANTE 4 MESES</span>
+        </div>
+        
+        <!-- Línea separadora inferior -->
+        <div style="border-top: 1px solid white; margin: 6px 0;"></div>
+        
+        <!-- Triángulo invertido hacia abajo -->
+        <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 15px solid #245fa4;"></div>
+      </div>
+      
+      <!-- Sección blanca con formulario -->
+      <div style="background-color: #fff; padding: 15px; border-radius: 0 0 25px 25px;">
+        <!-- Título principal -->
+        <h2 style="text-align: center; font-size: 22px; font-weight: bold; color: #245fa4; margin-bottom: 6px; font-family: 'Roboto Condensed', sans-serif;">¡Contrata Ahora!</h2>
+        
+        <!-- Número de teléfono -->
+        <p style="text-align: center; font-size: 22px; font-weight: bold; color: #245fa4; margin-bottom: 6px; font-family: 'Roboto Condensed', sans-serif;">919 44 36 78</p>
+        
+        <!-- Pregunta -->
+        <p style="text-align: center; font-size: 16px; font-weight: bold; color: #000; margin-bottom: 10px; font-family: 'Roboto Condensed', sans-serif;">¿Lo prefieres? Te llamamos</p>
+        
+        <!-- Campo de teléfono -->
+        <div style="margin-bottom: 10px;">
           <input
             type="tel"
             class="form-control"
@@ -468,39 +714,56 @@
             id="c2c-phone-modal"
             pattern="[0-9]*"
             inputmode="numeric"
-            required />
+            required
+            style="width: 100%; padding: 10px; border: 1px solid #245FA4; border-radius: 5px; font-size: 16px; font-family: 'Roboto Condensed', sans-serif;" />
         </div>
-        <div class="checkbox-cont mt-3">
-          <input
-            id="c2c-checkbox-modal"
-            class="c2c-checkbox-"
-            type="checkbox" />
-          <label
-            id="c2c-checkbox-label-modal"
-            for="c2c-checkbox-modal"
-            style="color: #000">Acepto las&nbsp;<span
+        
+        <!-- Checkbox de privacidad -->
+        <div style="margin-bottom: 10px;">
+          <label style="display: flex; align-items: center; font-size: 12px; color: #000; font-family: 'Roboto Condensed', sans-serif;">
+            <input
+              id="c2c-checkbox-modal"
+              type="checkbox"
+              style="margin-right: 6px; width: 14px; height: 14px;" />
+            Acepto la&nbsp;<span
               id="privacidad-modal-modal"
-              class="btn-medir btn-politicas">Políticas de privacidad</span></label>
+              class="btn-medir btn-politicas"
+              style="color: #245fa4; text-decoration: underline; cursor: pointer;">Política de Privacidad</span>
+          </label>
         </div>
-        <p id="c2c-form-msg-modal" class="c2c-form-msg">&nbsp;</p>
-        <p class="dgp">
+        
+        <!-- Texto legal DGP -->
+        <p style="font-size: 12px; color: #000; margin-bottom: 12px; text-align: left; line-height: 1.2; font-family: 'Roboto Condensed', sans-serif; font-style: italic;">
           <strong>
             ADT es una empresa de Seguridad homologada, inscrita en el Registro
             de Seguridad de la DGP con el nº 2817
           </strong>
         </p>
-        <div id="c2c-formu-resp-modal" class="c2c-form-resp"></div>
+        
+        <!-- Botón principal -->
         <button
           id="enviar-c2c-modal"
-          class="button-purple btn-black c2c-btn btn-medir position-relative w-100"
-          onclick="makeClick2Call($('#c2c-phone-modal').val(), $('#c2c-checkbox-modal').is(':checked'), '-modal', null);">
-          <p class="mb-0">Te llamamos <strong>GRATIS</strong></p>
+          class="btn-black c2c-btn btn-medir w-100"
+          onclick="makeClick2Call($('#c2c-phone-modal').val(), $('#c2c-checkbox-modal').is(':checked'), '-modal', null);"
+          style="background-color: black; color: white; border: none; border-radius: 25px; font-weight: bold; font-size: 18px; cursor: pointer; padding: 10px; width: 100%; margin-bottom: 10px; font-family: 'Roboto Condensed', sans-serif;">
+          Te llamamos GRATIS
         </button>
+        
+        <!-- Mensaje de respuesta -->
         <div id="c2c-formu-resp-modal" class="c2c-formu-resp"></div>
-        <img
-          src="assets/img/ADT-alarmas.png"
-          alt=""
-          style="width: 100%" />
+        <p id="c2c-form-msg-modal" class="c2c-form-msg">&nbsp;</p>
+        
+        <!-- Imagen ADT -->
+        <div style="text-align: center; margin-top: 4px; padding-bottom: 8px;">
+          <img
+            src="assets/img/ADT-alarmas.png"
+            alt="ADT Alarmas"
+            style="width: 100%; max-width: 180px; height: auto; display: block !important; margin: 0 auto;" 
+            loading="eager"
+            decoding="sync"
+            onload="console.log('ADT-alarmas.png cargada correctamente');"
+            onerror="console.log('Error cargando ADT-alarmas.png'); this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        </div>
       </div>
     </div>
   </div>
@@ -514,7 +777,7 @@
     <!--                <p class="free">&nbsp;Llámanos gratis</p>-->
     <!--                <p class="number telefono_numero">911 081 673</p>-->
     <!--            </div>-->
-    <!--        </a>-->
+    <!--        0</a>-->
     <div class="container">
       <p class="cookies-notice-title">
         <img

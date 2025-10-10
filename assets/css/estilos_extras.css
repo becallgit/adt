@@ -1,11 +1,484 @@
-/* MODAL */
+/* Modal CTA según diseño de Figma - Ajustado */
+.figma-modal {
+  width: 394px !important;
+  max-width: 394px !important;
+  border-radius: 25px !important;
+  overflow: visible !important;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.25) !important;
+  height: auto !important;
+  max-height: 90vh !important;
+  position: relative !important;
+  display: block !important;
+}
+
+/* Ajustar el contenedor del modal para centrarlo mejor */
+.modal-data.figma-modal {
+  position: relative !important;
+  margin: 0 auto !important;
+  z-index: 10002 !important;
+}
+
+/* Header del modal */
+.figma-modal .modal-c2c-header {
+  background: #000 !important;
+  color: white !important;
+  padding: 10px !important;
+  text-align: center !important;
+  border-radius: 25px 25px 0 0 !important;
+  position: relative !important;
+  min-height: 45px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.figma-modal .c2c-title {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  color: white !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.figma-modal .btn-close-white {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  width: 18px !important;
+  height: 18px !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: white !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  z-index: 10003 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Desactivar botones generados por CSS para el modal de Figma */
+.figma-modal .btn-close-white:after {
+  content: none !important;
+}
+
+.figma-modal .btn-close:after {
+  content: none !important;
+}
+
+/* Sección azul del precio */
+.figma-modal .seccion-precio {
+  background-color: #245fa4 !important;
+  padding: 20px !important;
+  position: relative !important;
+  min-height: 120px !important;
+}
+
+/* Precio principal según Figma */
+.figma-modal .precio-principal {
+  font-size: 50px !important;
+  font-weight: bold !important;
+  color: white !important;
+  line-height: 1 !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.figma-modal .precio-secundario {
+  font-size: 25px !important;
+  font-weight: bold !important;
+  color: white !important;
+  vertical-align: top !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.figma-modal .precio-asterisco {
+  font-size: 20px !important;
+  color: white !important;
+  vertical-align: top !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.figma-modal .iva-incluido {
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.figma-modal .duracion {
+  color: white !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+/* Triángulo hacia abajo */
+.figma-modal .triangulo-abajo {
+  position: absolute !important;
+  bottom: -15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 15px solid transparent !important;
+  border-right: 15px solid transparent !important;
+  border-top: 15px solid #245fa4 !important;
+}
+
+/* Formulario según Figma */
+.figma-modal .titulo-contrata {
+  text-align: center !important;
+  font-size: 25px !important;
+  font-weight: bold !important;
+  color: #245fa4 !important;
+  margin-bottom: 8px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.figma-modal .numero-telefono {
+  text-align: center !important;
+  font-size: 25px !important;
+  font-weight: bold !important;
+  color: #245fa4 !important;
+  margin-bottom: 10px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.figma-modal .pregunta-llamada {
+  text-align: center !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: #000 !important;
+  margin-bottom: 15px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+/* Input de teléfono según Figma */
+.figma-modal input[type="tel"] {
+  width: 100% !important;
+  padding: 12px !important;
+  border: 1px solid #245FA4 !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  margin-bottom: 15px !important;
+  box-sizing: border-box !important;
+}
+
+/* Checkbox según Figma */
+.figma-modal .checkbox-privacidad {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  color: #000 !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  margin-bottom: 15px !important;
+}
+
+.figma-modal .checkbox-privacidad input[type="checkbox"] {
+  margin-right: 8px !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.figma-modal .link-privacidad {
+  color: #245fa4 !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
+/* Texto legal según Figma */
+.figma-modal .texto-legal {
+  font-size: 14px !important;
+  color: #000 !important;
+  margin-bottom: 20px !important;
+  text-align: left !important;
+  line-height: 1.3 !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-style: italic !important;
+}
+
+/* Botón según Figma */
+.figma-modal .btn-llamada-gratis {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 25px !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  padding: 12px !important;
+  width: 100% !important;
+  margin-bottom: 15px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  transition: all 0.3s ease !important;
+}
+
+.figma-modal .btn-llamada-gratis:hover {
+  background-color: #333 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Imagen ADT según Figma */
+.figma-modal .imagen-adt {
+  text-align: center !important;
+  margin-top: 15px !important;
+  padding-bottom: 15px !important;
+  display: block !important;
+}
+
+.figma-modal .imagen-adt img {
+  width: 100% !important;
+  max-width: 180px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* Asegurar que el modal se muestre correctamente */
+.modal-cont-open .modal-data.figma-modal {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Anular estilos globales de .hero img para el modal */
+.figma-modal img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: 180px !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  width: auto !important;
+  object-fit: contain !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Específicamente para la imagen ADT */
+.figma-modal img[src*="ADT-alarmas"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  max-width: 180px !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Forzar que el contenedor de la imagen se muestre */
+.figma-modal div:has(img) {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Formulario del banner principal según diseño de Figma */
+.figma-form {
+  width: 333px !important;
+  height: 367px !important;
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 20px !important;
+  backdrop-filter: blur(10px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  position: relative !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+/* Imagen del formulario */
+.figma-form img {
+  width: auto !important;
+  max-width: 30px !important;
+  height: auto !important;
+  margin: 0 auto 10px auto !important;
+  display: block !important;
+}
+
+/* Título principal según Figma */
+.figma-form-title {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 38px !important;
+  color: #245FA4 !important;
+  text-align: center !important;
+  margin: 0 0 15px 0 !important;
+  line-height: 46px !important;
+}
+
+/* Campo de teléfono según Figma */
+.figma-form-field {
+  margin-bottom: 20px !important;
+}
+
+.figma-form-input {
+  width: 100% !important;
+  height: 37px !important;
+  border: 1px solid #245FA4 !important;
+  border-radius: 5px !important;
+  padding: 0 15px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  color: #000 !important;
+  background-color: #fff !important;
+  box-sizing: border-box !important;
+}
+
+.figma-form-input::placeholder {
+  color: #999 !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+}
+
+.figma-form-input:focus {
+  outline: none !important;
+  border-color: #245FA4 !important;
+  box-shadow: 0 0 0 2px rgba(36, 95, 164, 0.2) !important;
+}
+
+/* Botón principal según Figma */
+.figma-form-button {
+  width: 100% !important;
+  height: 41px !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 25px !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  margin-bottom: 20px !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.figma-form-button:hover {
+  background-color: #333333 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.figma-form-button:active {
+  transform: translateY(0) !important;
+}
+
+/* Checkbox de privacidad según Figma */
+.figma-form-checkbox {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 10px !important;
+  gap: 10px !important;
+}
+
+.figma-checkbox {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #D9D9D9 !important;
+  border: 0.5px solid #000000 !important;
+  border-radius: 2px !important;
+  cursor: pointer !important;
+  appearance: none !important;
+  position: relative !important;
+}
+
+.figma-checkbox:checked {
+  background-color: #245FA4 !important;
+  border-color: #245FA4 !important;
+}
+
+.figma-checkbox:checked::after {
+  content: '✓' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: white !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+.figma-checkbox-label {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 15px !important;
+  color: #000000 !important;
+  cursor: pointer !important;
+  line-height: 18px !important;
+}
+
+.figma-privacy-link {
+  color: #245FA4 !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
+/* Texto legal DGP según Figma */
+.figma-form-legal {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  font-size: 15px !important;
+  color: #000000 !important;
+  text-align: center !important;
+  line-height: 18px !important;
+  margin: -5px 0 0 0 !important;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .figma-form {
+    width: 90vw !important;
+    max-width: 320px !important;
+    height: auto !important;
+    min-height: 350px !important;
+    padding: 15px !important;
+  }
+  
+  .figma-form-title {
+    font-size: 32px !important;
+    line-height: 40px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .figma-form-input {
+    height: 35px !important;
+    font-size: 14px !important;
+  }
+  
+  .figma-form-button {
+    height: 40px !important;
+    font-size: 20px !important;
+  }
+  
+  .figma-checkbox-label,
+  .figma-form-legal {
+    font-size: 14px !important;
+  }
+}
 .modal-cont {
     position: fixed;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
-    z-index: 100;
+    z-index: 10000;
     display: none;
     align-items: center;
     justify-content: center;
@@ -14,6 +487,7 @@
 .modal-cont-open {
     width: 100%;
     height: 100%;
+    display: flex !important;
 }
 
 .modal-back {
@@ -37,7 +511,7 @@
     width: 400px;
     height: max-content;
     position: absolute;
-    z-index: 11;
+    z-index: 10001;
     transform: scale(0.9);
     opacity: 0;
     transition: var(--transition-modal);
@@ -142,6 +616,143 @@
 
     .modal-cont {
         align-items: flex-start;
+    }
+}
+
+/* Modal c2c - Diseño exacto de Figma */
+@media (min-width: 1200px) {
+    .modal-data.c2c {
+        width: 394px !important;
+        max-height: 95vh !important;
+        margin: 0 auto;
+        background-color: #fff !important;
+        border-radius: 25px !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    }
+    
+    /* Header del modal c2c - Diseño Figma exacto */
+    .modal-c2c-header {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        background-color: #000 !important;
+        color: white !important;
+        padding: 0px !important;
+        text-align: center !important;
+        border-radius: 25px 25px 0 0 !important;
+        position: relative !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Título del header - Diseño Figma exacto */
+    .modal-c2c-header .c2c-title {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin: 0 !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        color: white !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+    }
+    
+    /* Botón de cerrar - Diseño Figma exacto */
+    .modal-c2c-header .btn-close.c2c {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        top: 5px !important;
+        right: 5px !important;
+        z-index: 10003 !important;
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    /* Sección azul con precio - Diseño Figma exacto */
+    .modal-data.c2c div[style*="background-color: #245fa4"] {
+        background-color: #245fa4 !important;
+        padding: 40px 30px !important;
+        position: relative !important;
+    }
+    
+    /* Precio principal - Diseño Figma exacto */
+    .modal-data.c2c span[style*="font-size: 70px"] {
+        font-size: 70px !important;
+        font-weight: bold !important;
+        color: white !important;
+        line-height: 1 !important;
+    }
+    
+    .modal-data.c2c span[style*="font-size: 35px"] {
+        font-size: 35px !important;
+        font-weight: bold !important;
+        color: white !important;
+        vertical-align: top !important;
+    }
+    
+    /* Sección blanca con formulario - Diseño Figma exacto */
+    .modal-data.c2c div[style*="background-color: #fff"]:not(.modal-c2c-header) {
+        background-color: #fff !important;
+        padding: 40px 30px 30px !important;
+        border-radius: 0 0 20px 20px !important;
+    }
+    
+    /* Títulos principales - Diseño Figma exacto */
+    .modal-data.c2c h2[style*="font-size: 35px"] {
+        font-size: 35px !important;
+        font-weight: bold !important;
+        color: #245fa4 !important;
+        text-align: center !important;
+    }
+    
+    .modal-data.c2c p[style*="font-size: 35px"] {
+        font-size: 35px !important;
+        font-weight: bold !important;
+        color: #245fa4 !important;
+        text-align: center !important;
+    }
+    
+    /* Campo de teléfono - Diseño Figma exacto */
+    .modal-data.c2c input[type="tel"] {
+        width: 100% !important;
+        padding: 15px !important;
+        border: 1px solid #ddd !important;
+        border-radius: 10px !important;
+        font-size: 18px !important;
+    }
+    
+    /* Botón principal - Formato exacto del formulario principal */
+    .modal-data.c2c .c2c-btn {
+        background-color: black !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+        font-size: 12px !important;
+        cursor: pointer !important;
+        padding: 10px !important;
+        width: 100% !important;
+        font-family: 'Roboto Condensed', sans-serif !important;
+    }
+    
+    /* Mensaje de respuesta del modal c2c */
+    .modal-data.c2c .c2c-form-msg {
+        font-size: 14px !important;
+        margin-bottom: -20px !important;
+    }
+    
+    /* Imagen ADT - Diseño Figma exacto */
+    .modal-data.c2c img[alt="ADT Alarmas"] {
+        max-width: 200px !important;
+        height: auto !important;
+        margin: 0px auto !important;
+        display: block !important;
     }
 }
 
@@ -656,6 +1267,10 @@
     
     .header {
         height: 73px !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
     }
     
     .p1 {
@@ -702,6 +1317,10 @@
     
     .header {
         height: 85px !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
     }
     
     .p1 {
@@ -1166,10 +1785,611 @@
     }
 }
 
+/* Banner Móvil */
+.alamar-movil {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .alamar-movil {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .alarmas-adt {
+    display: none !important;
+  }
+  
+  .offer img {
+    display: none !important;
+  }
+  
+  .hero .hero-content .offer img {
+    display: none !important;
+  }
+  
+  .offer {
+    display: none !important;
+  }
+  
+  /* Quitar espacios del hero en móvil */
+  .hero {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .hero-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* CTA Principal - Estilo móvil según Figma */
+  .cta.figma-form {
+    position: relative !important;
+    width: 100vw !important;
+    max-width: none !important;
+    height: auto !important;
+    background: #F5F5F5 !important;
+    border-radius: 0 !important;
+    padding: 40px 30px 30px 30px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+  }
+  
+  /* Cambiar orden en móvil: texto legal antes del botón */
+  .figma-form-title {
+    order: 1 !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 28px !important;
+    line-height: 120% !important;
+    text-align: center !important;
+    color: #0057A7 !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  
+  .figma-form-subtitle {
+    order: 2 !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 22px !important;
+    line-height: 120% !important;
+    text-align: center !important;
+    color: #000000 !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  .figma-form-field {
+    order: 3 !important;
+    width: 100% !important;
+    max-width: 322px !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .figma-form-input {
+    width: 100% !important;
+    max-width: 322px !important;
+    height: 48px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #0057A7 !important;
+    border-radius: 5px !important;
+    padding: 0 20px !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-size: 25px !important;
+    color: rgba(36, 95, 164, 0.3) !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Imagen del formulario móvil */
+  .figma-form img {
+    width: auto !important;
+    max-width: 37px !important;
+    height: auto !important;
+    margin: 0 auto -13px auto !important;
+  }
+  
+  .figma-form-checkbox {
+    order: 4 !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  
+  .figma-checkbox {
+    width: 16px !important;
+    height: 16px !important;
+    background: #D9D9D9 !important;
+    border: 0.5px solid #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+  }
+  
+  .figma-checkbox-label {
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 1 !important;
+  }
+  
+  .figma-privacy-link {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Forzar color negro para políticas de privacidad - MÁXIMA PRIORIDAD */
+  .figma-form-checkbox label.figma-checkbox-label {
+    color: #000000 !important;
+    font-weight: 600 !important;
+  }
+  
+  .figma-form-checkbox span.figma-privacy-link {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Selector específico por ID */
+  #privacidad-modal-banner.figma-privacy-link {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Selector específico por for */
+  label[for="c2c-checkbox-banner"].figma-checkbox-label {
+    color: #000000 !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Regla universal con máxima especificidad */
+  .cta.figma-form .figma-form-checkbox label {
+    color: #000000 !important;
+  }
+  
+  .cta.figma-form .figma-form-checkbox span {
+    color: #000000 !important;
+  }
+  
+  /* Forzar todos los elementos del checkbox */
+  .figma-form-checkbox * {
+    color: #000000 !important;
+  }
+  
+  .figma-form-legal {
+    order: 5 !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    line-height: 120% !important;
+    color: #000000 !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .figma-form-button {
+    order: 6 !important;
+    width: 100% !important;
+    max-width: 253.02px !important;
+    height: 44px !important;
+    background: #000000 !important;
+    border-radius: 25px !important;
+    border: none !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 25px !important;
+    line-height: 120% !important;
+    text-align: center !important;
+    color: #FFFFFF !important;
+    margin: 20px 0 15px 0 !important;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+  }
+  
+  /* Imagen CTA debajo del formulario - Sin espacio */
+  .cta-mobile-image {
+    width: 100vw !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    margin-top: -20px !important;
+  }
+  
+  /* Imagen servicios con scroll */
+  .servicios-mobile-image {
+    width: 100vw !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    margin-top: -20px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+  
+  /* Cards móviles sin carrusel */
+  .cards-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  
+  .cards-mobile .card {
+    position: relative !important;
+    width: 307px !important;
+    height: 224px !important;
+    background: #FFFFFF !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 25px !important;
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+    padding: 15px 20px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+  }
+  
+  .cards-mobile .card h4 {
+    margin-top: 10px !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #245FA4 !important;
+  }
+  
+  .cards-mobile .card p {
+    margin-bottom: 8px !important;
+    text-align: left !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+  
+  .cards-mobile .card .destacado {
+    margin-top: 5px !important;
+    text-align: left !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    align-self: flex-start !important;
+    display: block !important;
+    width: auto !important;
+    color: #245FA4 !important;
+  }
+  
+  /* Servicios cards móviles según Figma - MÁXIMA ESPECIFICIDAD */
+  .servicios .servicios-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    margin-top: -20px !important;
+    padding: 20px 7px !important;
+    background-color: #F5F5F5 !important;
+  }
+  .servicios .servicios-mobile .serv-card {
+    position: relative !important;
+    width: 320px !important;
+    height: 800px !important;
+    background: #F5F5F5 !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    overflow: hidden !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card h3 {
+    margin: 0 !important;
+    padding: 15px 16px !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    background-color: #245FA4 !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+    text-align: center !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-photo {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .content {
+    padding: 30px !important;
+    text-align: left !important;
+  }
+  
+  
+  
+  .servicios .servicios-mobile .serv-card .content p {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-list {
+    margin: 0 0 20px 0 !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-list li {
+    font-size: 18px !important;
+    margin: 0 0 8px 0 !important;
+    text-align: left !important;
+    line-height: 1.3 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-list li img {
+    width: 18px !important;
+    height: 18px !important;
+    flex: 0 0 18px !important;
+    display: block !important;
+    object-fit: contain !important;
+    margin: 2px 0 0 0 !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .smart-arming {
+    display: block !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #245FA4 !important;
+    text-align: center !important;
+    margin: 0 0 15px 0 !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-btn {
+    width: 100% !important;
+    margin: 15px 0 0 0 !important;
+    padding: 15px !important;
+    font-size: 18px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card:nth-child(2) {
+    height: 850px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card:nth-child(3) h3 {
+    font-size: 24px !important;
+  }
+  
+  /* Eliminar espacio entre servicios móviles y banner-app */
+  .servicios-mobile {
+    margin-bottom: -20px !important;
+  }
+  
+  .banner-app {
+    margin-top: -20px !important;
+  }
+  
+}
+
+/* Estilos para Desktop - Formulario Figma */
+.figma-form-title {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  line-height: 120% !important;
+  text-align: center !important;
+  color: #245FA4 !important;
+  margin: 0 0 15px 0 !important;
+  padding: 0 !important;
+}
+
+  .figma-form-subtitle {
+    display: none !important;
+  }
+  
+  .figma-form-button {
+    margin: 0 0 15px 0 !important;
+  }
+}
+
+.figma-form-field {
+  margin: 0 0 20px 0 !important;
+}
+
+.figma-form-checkbox {
+  margin: 0 0 20px 0 !important;
+}
+
+.figma-form-legal {
+  font-size: 13px !important;
+  line-height: 120% !important;
+  margin: 0 !important;
+}
+
+/* FORZAR COLOR NEGRO PARA POLÍTICAS DE PRIVACIDAD - MÁXIMA PRIORIDAD */
+@media (max-width: 768px) {
+  .figma-form-checkbox label,
+  .figma-form-checkbox span,
+  .figma-checkbox-label,
+  .figma-privacy-link,
+  #privacidad-modal-banner {
+    color: #000000 !important;
+    font-weight: 600 !important;
+  }
+  
+  .figma-privacy-link,
+  #privacidad-modal-banner {
+    text-decoration: underline !important;
+    font-weight: 700 !important;
+  }
+  
+  /* Regla específica para el span de privacidad */
+  span#privacidad-modal-banner {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+  }
+  
+  /* Forzar margen del botón en móvil */
+  .cta.figma-form .figma-form-button {
+    margin-bottom: 15px !important;
+    margin-top: 20px !important;
+  }
+  
+  button.figma-form-button {
+    margin-bottom: 15px !important;
+    margin-top: 20px !important;
+  }
+  
+  .figma-form-button {
+    margin-bottom: 15px !important;
+    margin-top: 20px !important;
+  }
+}
+
+/* Header Móvil - Diseño Figma */
+.header-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-mobile {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+  }
+  
+  .logo-adt-mobile {
+    display: flex !important;
+    align-items: center !important;
+  }
+  
+  .logo-adt-img {
+    max-height: 60px !important;
+    width: auto !important;
+  }
+  
+  .btn-llamar-mobile {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  
+  .btn-llamar-content {
+    display: flex !important;
+    align-items: center !important;
+    background-color: #245FA4 !important;
+    border-radius: 25px !important;
+    padding: 8px 16px !important;
+    gap: 8px !important;
+    box-shadow: 0 2px 8px rgba(36, 95, 164, 0.3) !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .btn-llamar-content:hover {
+    background-color: #1e4a8a !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(36, 95, 164, 0.4) !important;
+  }
+  
+  .btn-llamar-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    color: white !important;
+  }
+  
+  .llamanos-gratis {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+  
+  .numero-telefono {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+  
+  .btn-llamar-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+  }
+  
+  .btn-llamar-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+    }
+}
+
 /* Estilos específicos para móvil - imagen de oferta como fondo */
 @media (max-width: 768px) {
   .header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
   }
   
   .offer {
@@ -1280,4 +2500,62 @@
     padding-bottom: 100px !important;
   }
   
+}
+
+/* FORZAR MÁRGENES ADECUADOS EN SERVICIOS MÓVILES - MÁXIMA PRIORIDAD */
+@media (max-width: 768px) {
+  .servicios .servicios-mobile .serv-card h3 {
+    font-size: 26px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card:nth-child(2) {
+    height: 850px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card:nth-child(3) h3 {
+    font-size: 24px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .content p {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+    font-size: 20px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-list {
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-list li {
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    font-size: 18px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .smart-arming {
+    margin: 0 0 15px 0 !important;
+    font-size: 20px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card .serv-btn {
+    margin: 15px 0 0 0 !important;
+    font-size: 18px !important;
+  }
+  
+  .servicios .servicios-mobile .serv-card:nth-child(2) .serv-btn {
+    margin: 20px 0 0 0 !important;
+    font-size: 18px !important;
+  }
+  
+  /* Eliminar espacio entre servicios móviles y banner-app */
+  .servicios-mobile {
+    margin-bottom: -20px !important;
+  }
+  
+  .banner-app {
+    margin-top: -20px !important;
+  }
 }
