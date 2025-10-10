@@ -817,7 +817,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 90;
+    z-index: 100000;
     transition: var(--transition-cookies);
     padding: 10px 0;
 }
