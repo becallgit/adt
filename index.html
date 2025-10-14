@@ -142,7 +142,7 @@
         <button 
           class="figma-form-button" 
           style="margin-bottom: 15px !important;"
-          onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-header-form'});">
+          onclick="docCookies.setItem('idform', 'formulario-header-form'); makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-header-form'});">
           Te llamamos GRATIS
         </button>
         
@@ -273,7 +273,7 @@
         </div>
       </div>
 
-      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-beneficios-form'});" class="btn-primary btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
+      <button onclick="docCookies.setItem('idform', 'formulario-beneficios-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-beneficios-form'});" class="btn-primary btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
     </div>
   </div>
 
@@ -562,7 +562,7 @@
           inteligente
         </li>
       </ul>
-      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
+      <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
     </div>
   </div>
 
@@ -630,7 +630,7 @@
         <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA</span>
       </div>
       <div>
-        <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
+        <button onclick="docCookies.setItem('idform', 'formulario-footer-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
       </div>
     </div>
     <div class="footer-top">

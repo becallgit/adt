@@ -142,7 +142,7 @@
         <button 
           class="figma-form-button" 
           style="margin-bottom: 15px !important;"
-          onclick="makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-header-form'});">
+          onclick="docCookies.setItem('idform', 'formulario-header-form'); makeClick2Call($('#c2c-phone-banner').val(), $('#c2c-checkbox-banner').is(':checked'),'-banner', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-header-form'});">
           Te llamamos GRATIS
         </button>
         
@@ -161,7 +161,9 @@
       <img src="assets/img/cta.png" alt="CTA móvil" class="cta-mobile-image hidden-lg" />
       
       <!-- Imagen servicios con scroll solo en móvil -->
-      <img src="assets/img/scroll servicios.png" alt="Scroll Servicios" class="servicios-mobile-image hidden-lg" />
+      <a href="#servicios-mobile" class="servicios-mobile-image-link hidden-lg">
+        <img src="assets/img/scroll servicios.png" alt="Scroll Servicios" class="servicios-mobile-image" />
+      </a>
     </div>
   </div>
 
@@ -271,7 +273,7 @@
         </div>
       </div>
 
-      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-beneficios-form'});" class="btn-primary btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
+      <button onclick="docCookies.setItem('idform', 'formulario-beneficios-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-beneficios-form'});" class="btn-primary btn-protegete" data-click2call="2">PROTÉGETE DESDE HOY</button>
     </div>
   </div>
 
@@ -406,7 +408,7 @@
     </div>
     
     <!-- Mobile: Sin carrusel -->
-    <div class="servicios-mobile hidden-lg" style="padding: 20px 7px !important; background-color: #F5F5F5 !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important; margin-top: -40px !important;">
+    <div id="servicios-mobile" class="servicios-mobile hidden-lg" style="padding: 20px 7px !important; background-color: #F5F5F5 !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important; margin-top: -40px !important;">
       <!-- CARD 1 -->
       <div class="serv-card" style="width: 320px !important; height: 800px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
         <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">SEGURIDAD</h3>
@@ -560,7 +562,7 @@
           inteligente
         </li>
       </ul>
-      <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
+      <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
     </div>
   </div>
 
@@ -628,7 +630,7 @@
         <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA</span>
       </div>
       <div>
-        <button onclick="document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
+        <button onclick="docCookies.setItem('idform', 'formulario-footer-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
       </div>
     </div>
     <div class="footer-top">
