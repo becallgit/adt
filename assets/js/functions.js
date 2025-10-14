@@ -251,3 +251,16 @@ function controlMenuMobile() {
     $('.header-menu-btn-mobile-bar.c').toggleClass('open-rotate');
     $('.header-menu-btn-mobile-bar.b').toggleClass('open-bar-center');
 }
+
+// Scroll suave para imagen servicios móvil
+$(document).ready(function() {
+    $('.servicios-mobile-image-link').on('click', function(e) {
+        e.preventDefault();
+        var target = $('#servicios-mobile');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 80 // Ajuste para el header fijo
+            }, 800);
+        }
+    });
+});

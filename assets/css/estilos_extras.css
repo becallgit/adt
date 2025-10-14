@@ -2047,6 +2047,33 @@
     overflow-y: hidden !important;
   }
   
+  /* Enlace de imagen servicios móvil */
+  .servicios-mobile-image-link {
+    display: block !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    margin-top: -20px !important;
+  }
+  
+  .servicios-mobile-image-link:hover {
+    opacity: 0.9 !important;
+  }
+  
+  /* Centrar logos en móvil */
+  .footer .logos {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .footer .logos-section {
+    align-items: center !important;
+  }
+  
   /* Cards móviles sin carrusel */
   .cards-mobile {
     display: flex !important;
