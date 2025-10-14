@@ -322,7 +322,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio2">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio1">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -362,7 +362,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio3">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio2">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -402,7 +402,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio4">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio3">PROTÉGETE AHORA</button>
         </div>
       </div>
     </div>
@@ -446,7 +446,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio2">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio1">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -486,7 +486,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio3">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio2">PROTÉGETE AHORA</button>
         </div>
       </div>
 
@@ -526,7 +526,7 @@
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
-          <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio4">PROTÉGETE AHORA</button>
+          <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio3">PROTÉGETE AHORA</button>
         </div>
       </div>
     </div>
