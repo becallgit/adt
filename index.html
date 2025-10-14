@@ -633,7 +633,7 @@
     </div>
     <div class="footer-top">
       <div class="logos-section">
-        <div class="logos">0
+        <div class="logos">
           <img src="assets/img/logo-becall.png" alt="logo becall" />
           <img src="assets/img/logo-adt-footer.png" alt="logo ADT" />
         </div>
