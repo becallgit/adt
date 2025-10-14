@@ -600,14 +600,13 @@ button:disabled {
 /* Contenedor flexible para offer + cta */
 .hero-content {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 80px;
   /* ajusta según lo que necesites */
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 60px;
   /* ya no necesitas top padding */
   gap: 30px;
@@ -984,6 +983,19 @@ button:disabled {
     height: 600px !important;
     width: 100% !important;
     object-fit: cover !important;
+  }
+  
+  .hero-content {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    align-items: center !important;
+  }
+}
+
+/* --- Ajuste específico para pantallas muy grandes (1920x1080) --- */
+@media (min-width: 1920px) {
+  .hero>img {
+    height: 700px !important;
   }
   
   .hero-content {
