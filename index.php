@@ -511,7 +511,7 @@
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Gestión de persianas y toldos
-            </li>
+           </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
               de climatización
@@ -702,7 +702,7 @@
         <h2 style="text-align: center; font-size: 22px; font-weight: bold; color: #245fa4; margin-bottom: 6px; font-family: 'Roboto Condensed', sans-serif;">¡Contrata Ahora!</h2>
         
         <!-- Número de teléfono -->
-        <p style="text-align: center; font-size: 22px; font-weight: bold; color: #245fa4; margin-bottom: 6px; font-family: 'Roboto Condensed', sans-serif;">919 44 36 78</p>
+        <p style="text-align: center; font-size: 22px; font-weight: bold; color: #245fa4; margin-bottom: 6px; font-family: 'Roboto Condensed', sans-serif;"><a href="tel:919443678" style="color: #245fa4; text-decoration: none;">919 44 36 78</a></p>
         
         <!-- Pregunta -->
         <p style="text-align: center; font-size: 16px; font-weight: bold; color: #000; margin-bottom: 10px; font-family: 'Roboto Condensed', sans-serif;">¿Lo prefieres? Te llamamos</p>
