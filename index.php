@@ -1586,6 +1586,7 @@
   <script src="assets/js/owl-carousel-v2.3.4.min.js"></script>
   <script src="assets/js/gestionar-cookies.js"></script>
   <script src="assets/js/captura-parametros.js"></script>
+  <script src="assets/js/config.js"></script>
   <script src="assets/js/functions.js"></script>
 
   <script>

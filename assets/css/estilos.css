@@ -2022,3 +2022,35 @@ button:disabled {
   width: 100% !important;
   z-index: 9999 !important;
 }
+
+/* Animación para el spinner de carga */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Estilos para el indicador de carga */
+.loading-indicator {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.loading-indicator .spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Estilos para mensajes de error */
+.c2c-form-msg {
+  transition: all 0.3s ease;
+}
+
+.c2c-form-msg.error {
+  color: #dc3545 !important;
+  font-weight: bold;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+}

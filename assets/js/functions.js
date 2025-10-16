@@ -75,76 +75,195 @@ function makeClick2Call(telefono, checked, type, click2callId) {
 
     if (is_mobile(telefono) || is_fijo(telefono)) {
         if (checked) {
-            // MODO LOCAL: Simular respuesta del servidor sin hacer llamada real
-            console.log('MODO LOCAL: Simulando envío de teléfono:', telefono);
+            // Construir URL con parámetros GET como en tuofertaenergetica.es
+            let url = getConfig().backendUrl;
+            
+            console.log('Enviando teléfono al backend:', telefono);
             console.log('Servicio:', docCookies.getItem('adt_servicio') || '');
             
-            // Simular delay de red
-            setTimeout(function() {
-                // Simular respuesta exitosa del servidor
-                let id = click2callId || docCookies.getItem('click2call');
-                window.modal_showed = true;
-                let respuesta = '<div id="enviado-ok-ctc' + id + '" class="c2c-formu-data p-5 col-xs-12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; position: relative;">' +
-                    '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp" style="position: absolute; top: 15px; right: 15px; cursor: pointer; font-size: 24px; color: #999; background: #f0f0f0; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; line-height: 1;">×</div>' +
-                    '<strong style="font-size: 24px; color: #245fa4; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</strong>' +
-                    '<p style="font-size: 16px; margin-bottom: 30px; color: #333;">Uno de nuestros asesores se pondrá en contacto contigo en breve.</p>' +
-                    '<div class="text-center success-image-container"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" class="success-image" /></div>' +
-                    '</div>';
-
-             
-                    if (!openCallCenter) {
-                    respuesta = '<div id="enviado-ok-ctc' + id + '" class="c2c-formu-data p-5 col-xs-12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; position: relative;">' +
-                        '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp" style="position: absolute; top: 15px; right: 15px; cursor: pointer; font-size: 24px; color: #999; background: #f0f0f0; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; line-height: 1;">×</div>' +
-                        '<strong style="font-size: 24px; color: #245fa4; margin-bottom: 20px;">¡Gracias por confiar en nosotros!</strong>' +
-                        '<p style="font-size: 16px; margin-bottom: 30px; color: #333;">Nuestros agentes se pondrán en contacto contigo en nuestro horario de Lunes a Viernes de 9:00 a 21:00.</p>' +
-                        '<div class="text-center success-image-container"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" class="success-image" /></div>' +
-                        '</div>';
-                }
-
-                // Para el formulario principal (banner), reemplazar todo el contenido del CTA
-                if (type === '-banner') {
-                    $('.cta').html(respuesta);
-                } else {
-                    // Para modales, reemplazar todo el contenido del modal
-                    $('.data-box.c2c.modal-data').html(respuesta);
-                }
-                resetFormC2c(type);
-                window.dataLayer = window.dataLayer || [];
-                dataLayer.push({ 'event': 'formSubmitOK' });
-                
-                // GTM LeadOfertaAlarma event
-                window.dataLayer.push({
-                    event: "LeadOfertaAlarma",
-                    leadInfo: {
-                        idform: docCookies.getItem('idform') || '',
-                        phone: telefono,
-                        servicio: docCookies.getItem('adt_servicio') || ''
+            // Mostrar indicador de carga
+            showLoadingIndicator(type);
+            
+            // Agregar parámetros a la URL
+            if (docCookies.hasItem('adt_fuente'))
+                url += 'fuente=' + docCookies.getItem('adt_fuente') + '&';
+            if (docCookies.hasItem('adt_campaign'))
+                url += 'campanaId=' + docCookies.getItem('adt_campaign') + '&';
+            if (docCookies.hasItem('adt_gclid'))
+                url += 'gclid=' + docCookies.getItem('adt_gclid') + '&';
+            if (docCookies.hasItem('adt_fclid'))
+                url += 'fclid=' + docCookies.getItem('adt_fclid') + '&';
+            if (docCookies.hasItem('adId'))
+                url += 'adId=' + docCookies.getItem('adId') + '&';
+            
+            // Agregar servicio
+            let servicio = docCookies.getItem('adt_servicio') || '';
+            if (type === '-modal') {
+                servicio = docCookies.getItem('adt_servicio') || '';
+            }
+            
+            // Agregar teléfono al final
+            url += 'telefono=' + telefono + '&servicio=' + servicio;
+            
+            console.log('URL completa:', url);
+            
+            // Realizar llamada AJAX GET al backend
+            $.ajax({
+                url: url,
+                type: 'GET',
+                timeout: getConfig().timeout,
+                success: function(response) {
+                    console.log('Respuesta del backend:', response);
+                    if (response.success) {
+                        handleSuccessResponse(response, type, click2callId);
+                    } else {
+                        handleErrorResponse(null, 'error', response.error || 'Error del servidor', type);
                     }
-                });
-                
-                window.uetq = window.uetq || [];
-                window.uetq.push({ 'ec': 'click2call', 'ea': 'send', 'el': 'conversion' });
-                
-                console.log('MODO LOCAL: Formulario enviado exitosamente');
-            }, 1000); // Simular 1 segundo de delay
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error en la llamada al backend:', error);
+                    console.error('Status:', status);
+                    console.error('Response:', xhr.responseText);
+                    handleErrorResponse(xhr, status, error, type);
+                }
+            });
 
             function showErrorMsg(type, message) {
                 $('#c2c-form-msg' + type).html(message).show();
                 addMsgGtm(type);
             }
         } else {
-            $('#c2c-form-msg' + type).html("Debes aceptar la política de privacidad");
+            const config = getConfig();
+            $('#c2c-form-msg' + type).html(config.messages.privacyRequired);
             $('#c2c-checkbox-label' + type).addClass('checkbox-error');
             $('#c2c-form-msg' + type).show();
             addMsgGtm(type);
         }
     } else {
-        $('#c2c-form-msg' + type).html("Debes introducir un teléfono válido");
+        const config = getConfig();
+        $('#c2c-form-msg' + type).html(config.messages.phoneRequired);
         $('#c2c-phone' + type).css({ 'borderColor': 'red' });
         $('#c2c-form-msg' + type).show();
         addMsgGtm(type);
     }
     return false;
+}
+
+// Función para mostrar indicador de carga
+function showLoadingIndicator(type) {
+    const config = getConfig();
+    const loadingHtml = '<div class="loading-indicator" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 200px;">' +
+        '<div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #245fa4; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 20px;"></div>' +
+        '<p style="color: #245fa4; font-size: 16px;">' + config.messages.loading + '</p>' +
+        '</div>';
+    
+    if (type === '-banner') {
+        $('.cta').html(loadingHtml);
+    } else {
+        $('.data-box.c2c.modal-data').html(loadingHtml);
+    }
+}
+
+// Función para manejar respuesta exitosa del backend
+function handleSuccessResponse(response, type, click2callId) {
+    console.log('Procesando respuesta exitosa:', response);
+    
+    const config = getConfig();
+    let id = click2callId || docCookies.getItem('click2call');
+    window.modal_showed = true;
+    
+    // Determinar el mensaje basado en la respuesta del backend
+    let message = response.message || config.messages.successMessage;
+    
+    // Si el backend indica que está fuera del horario
+    if (response.outsideHours) {
+        message = config.messages.outsideHoursMessage;
+    }
+    
+    let respuesta = '<div id="enviado-ok-ctc' + id + '" class="c2c-formu-data p-5 col-xs-12" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; position: relative;">' +
+        '<div onclick="closeRespC2c()" class="btn-close btn-close-c2c-resp" style="position: absolute; top: 15px; right: 15px; cursor: pointer; font-size: 24px; color: #999; background: #f0f0f0; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; line-height: 1;">×</div>' +
+        '<strong style="font-size: 24px; color: #245fa4; margin-bottom: 20px;">' + config.messages.success + '</strong>' +
+        '<p style="font-size: 16px; margin-bottom: 30px; color: #333;">' + message + '</p>' +
+        '<div class="text-center success-image-container"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" class="success-image" /></div>' +
+        '</div>';
+
+    // Para el formulario principal (banner), reemplazar todo el contenido del CTA
+    if (type === '-banner') {
+        $('.cta').html(respuesta);
+    } else {
+        // Para modales, usar el mismo método que tuofertaenergetica.es
+        $('#c2c-formu-resp' + type).css({ 'display': 'flex' });
+        $('#c2c-formu-resp' + type).html(respuesta);
+    }
+    
+    resetFormC2c(type);
+    
+    // Eventos de tracking
+    if (config.tracking.enableGTM) {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({ 'event': 'formSubmitOK' });
+        
+        // GTM LeadOfertaAlarma event
+        window.dataLayer.push({
+            event: "LeadOfertaAlarma",
+            leadInfo: {
+                idform: docCookies.getItem('idform') || '',
+                phone: response.phone || '',
+                servicio: docCookies.getItem('adt_servicio') || '',
+                leadId: response.leadId || ''
+            }
+        });
+    }
+    
+    if (config.tracking.enableUET) {
+        window.uetq = window.uetq || [];
+        window.uetq.push({ 'ec': 'click2call', 'ea': 'send', 'el': 'conversion' });
+    }
+    
+    if (config.tracking.enableConsole) {
+        console.log('Formulario enviado exitosamente al backend');
+    }
+}
+
+// Función para manejar errores del backend
+function handleErrorResponse(xhr, status, error, type) {
+    console.error('Error del backend:', { xhr, status, error });
+    
+    const config = getConfig();
+    let errorMessage = config.messages.error;
+    
+    // Personalizar mensaje según el tipo de error
+    if (status === 'timeout') {
+        errorMessage = config.messages.timeout;
+    } else if (xhr.status === 400) {
+        errorMessage = config.messages.invalidData;
+    } else if (xhr.status === 500) {
+        errorMessage = config.messages.serverError;
+    } else if (xhr.status === 0) {
+        errorMessage = config.messages.connectionError;
+    }
+    
+    // Mostrar mensaje de error
+    $('#c2c-form-msg' + type).html(errorMessage).show();
+    $('#c2c-form-msg' + type).css({ 'color': 'red', 'font-weight': 'bold' });
+    
+    // Restaurar formulario
+    if (type === '-banner') {
+        // Restaurar formulario original
+        location.reload();
+    } else {
+        // Para modales, mantener el formulario pero mostrar error
+        setTimeout(function() {
+            $('#c2c-form-msg' + type).html('&nbsp;').hide();
+        }, 5000);
+    }
+    
+    // Tracking de error
+    addMsgGtm(type);
+    
+    if (config.tracking.enableConsole) {
+        console.log('Error manejado:', errorMessage);
+    }
 }
 
 function resetFormC2c(type) {
