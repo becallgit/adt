@@ -187,14 +187,9 @@ function handleSuccessResponse(response, type, click2callId) {
         '<div class="text-center success-image-container"><img src="assets/img/ADT-alarmas.png" style="height: 200px; width: auto;" class="success-image" /></div>' +
         '</div>';
 
-    // Para el formulario principal (banner), reemplazar todo el contenido del CTA
-    if (type === '-banner') {
-        $('.cta').html(respuesta);
-    } else {
-        // Para modales, usar el mismo método que tuofertaenergetica.es
-        $('#c2c-formu-resp' + type).css({ 'display': 'flex' });
-        $('#c2c-formu-resp' + type).html(respuesta);
-    }
+    // Para ambos formularios (banner y modal), usar el mismo método
+    $('#c2c-formu-resp' + type).css({ 'display': 'flex' });
+    $('#c2c-formu-resp' + type).html(respuesta);
     
     resetFormC2c(type);
     
@@ -249,8 +244,10 @@ function handleErrorResponse(xhr, status, error, type) {
     
     // Restaurar formulario
     if (type === '-banner') {
-        // Restaurar formulario original
-        location.reload();
+        // Para el banner, mantener el formulario pero mostrar error
+        setTimeout(function() {
+            $('#c2c-form-msg' + type).html('&nbsp;').hide();
+        }, 5000);
     } else {
         // Para modales, mantener el formulario pero mostrar error
         setTimeout(function() {
@@ -280,13 +277,13 @@ function closeRespC2c() {
     $('.c2c-formu-resp').hide();
     
     // Si el mensaje está en el formulario principal, recargar la página
-    if ($('.cta').find('#enviado-ok-ctc').length > 0) {
+    if ($('#c2c-formu-resp-banner').find('#enviado-ok-ctc').length > 0) {
         location.reload();
         return;
     }
     
     // Si el mensaje está en un modal, cerrar el modal
-    if ($('.data-box.c2c.modal-data').find('#enviado-ok-ctc').length > 0) {
+    if ($('#c2c-formu-resp-modal').find('#enviado-ok-ctc').length > 0) {
         closeModal('c2c');
         return;
     }
