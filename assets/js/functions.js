@@ -114,7 +114,20 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                 timeout: getConfig().timeout,
                 success: function(response) {
                     console.log('Respuesta del backend:', response);
-                    if (response.success) {
+                    console.log('Tipo de respuesta:', typeof response);
+                    
+                    // Verificar si la respuesta es un string JSON
+                    if (typeof response === 'string') {
+                        try {
+                            response = JSON.parse(response);
+                        } catch (e) {
+                            console.error('Error parseando JSON:', e);
+                            handleErrorResponse(null, 'error', 'Respuesta del servidor no válida', type);
+                            return;
+                        }
+                    }
+                    
+                    if (response && response.success) {
                         handleSuccessResponse(response, type, click2callId);
                     } else {
                         handleErrorResponse(null, 'error', response.error || 'Error del servidor', type);
@@ -124,6 +137,7 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                     console.error('Error en la llamada al backend:', error);
                     console.error('Status:', status);
                     console.error('Response:', xhr.responseText);
+                    console.error('XHR:', xhr);
                     handleErrorResponse(xhr, status, error, type);
                 }
             });
@@ -157,16 +171,16 @@ function showLoadingIndicator(type) {
         '<p style="color: #245fa4; font-size: 16px;">' + config.messages.loading + '</p>' +
         '</div>';
     
-    if (type === '-banner') {
-        $('.cta').html(loadingHtml);
-    } else {
-        $('.data-box.c2c.modal-data').html(loadingHtml);
-    }
+    // Mostrar el indicador de carga en el elemento de respuesta
+    $('#c2c-formu-resp' + type).css({ 'display': 'flex' });
+    $('#c2c-formu-resp' + type).html(loadingHtml);
 }
 
 // Función para manejar respuesta exitosa del backend
 function handleSuccessResponse(response, type, click2callId) {
     console.log('Procesando respuesta exitosa:', response);
+    console.log('Tipo de formulario:', type);
+    console.log('Elemento de respuesta:', '#c2c-formu-resp' + type);
     
     const config = getConfig();
     let id = click2callId || docCookies.getItem('click2call');
@@ -188,8 +202,10 @@ function handleSuccessResponse(response, type, click2callId) {
         '</div>';
 
     // Para ambos formularios (banner y modal), usar el mismo método
+    console.log('Mostrando mensaje de éxito en:', '#c2c-formu-resp' + type);
     $('#c2c-formu-resp' + type).css({ 'display': 'flex' });
     $('#c2c-formu-resp' + type).html(respuesta);
+    console.log('Mensaje de éxito mostrado');
     
     resetFormC2c(type);
     
@@ -238,22 +254,17 @@ function handleErrorResponse(xhr, status, error, type) {
         errorMessage = config.messages.connectionError;
     }
     
+    // Ocultar el indicador de carga
+    $('#c2c-formu-resp' + type).hide();
+    
     // Mostrar mensaje de error
     $('#c2c-form-msg' + type).html(errorMessage).show();
     $('#c2c-form-msg' + type).css({ 'color': 'red', 'font-weight': 'bold' });
     
-    // Restaurar formulario
-    if (type === '-banner') {
-        // Para el banner, mantener el formulario pero mostrar error
-        setTimeout(function() {
-            $('#c2c-form-msg' + type).html('&nbsp;').hide();
-        }, 5000);
-    } else {
-        // Para modales, mantener el formulario pero mostrar error
-        setTimeout(function() {
-            $('#c2c-form-msg' + type).html('&nbsp;').hide();
-        }, 5000);
-    }
+    // Restaurar formulario después de un tiempo
+    setTimeout(function() {
+        $('#c2c-form-msg' + type).html('&nbsp;').hide();
+    }, 5000);
     
     // Tracking de error
     addMsgGtm(type);
