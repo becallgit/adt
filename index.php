@@ -177,6 +177,11 @@
           Te llamamos GRATIS
         </button>
         
+        <!-- Texto promocional solo para móvil -->
+        <div class="mobile-promo-text" style="display: none; position: relative; margin-top: 10px;">
+          <p style="font-size: 12px; color: #666; margin: 0; line-height: 1.3;">*19,90€ con iva incluido durante los 4 primeros meses sobre el precio tarifa del paquete elegido. Después desde 42,35€/mes IVA incluido. Instalación y alta gratis en paquetes ADT para hogar. Servicio ADT help incluido de acuerdo con las condiciones de promoción.</p>
+        </div>
+        
         <!-- Texto legal DGP según Figma -->
         <p class="figma-form-legal hidden-xs">
           ADT es una empresa de Seguridad homologada, inscrita en el Registro
@@ -318,7 +323,7 @@
     <!-- Desktop: Carrusel -->
     <div class="owl-carousel owl-loaded owl-drag owl-theme servicios-cards hidden-xs">
       <!-- CARD 1 -->
-      <div class="serv-card">
+      <div class="serv-card" style="height: 1000px;">
         <h3>SEGURIDAD</h3>
         <img
           class="serv-photo"
@@ -362,7 +367,7 @@
       </div>
 
       <!-- CARD 2 -->
-      <div class="serv-card">
+      <div class="serv-card" style="height: 1000px;">
         <h3>VÍDEO INTELIGENCIA</h3>
         <img
           class="serv-photo"
@@ -377,10 +382,6 @@
           <ul class="serv-list">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Graba y visualiza en alta definición tus eventos de alarma.
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Recibe notificaciones "push" con clips de vídeo cuando haya alguna actividad en tu hogar.
             </li>
             <li>
@@ -389,15 +390,11 @@
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Conecta las cámaras IP a la central receptora de alarmas de ADT para una mayor protección.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Solo tú podrás conectarte y visualizar de forma segura tus cámaras con encriptación de nivel bancario.
+              Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -406,7 +403,7 @@
       </div>
 
       <!-- CARD 3 -->
-      <div class="serv-card">
+      <div class="serv-card" style="height: 1000px;">
         <h3>CONECTIVIDAD</h3>
         <img
           class="serv-photo"
@@ -449,7 +446,7 @@
     <!-- Mobile: Sin carrusel -->
     <div id="servicios-mobile" class="servicios-mobile hidden-lg" style="padding: 20px 7px !important; background-color: #F5F5F5 !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important; margin-top: -40px !important;">
       <!-- CARD 1 -->
-      <div class="serv-card" style="width: 320px !important; height: 950px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+      <div class="serv-card" style="width: 320px !important; height: 1100px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
         <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">SEGURIDAD</h3>
         <img
           class="serv-photo"
@@ -510,10 +507,6 @@
           <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Graba y visualiza en alta definición tus eventos de alarma.
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Recibe notificaciones "push" con clips de vídeo cuando haya alguna actividad en tu hogar.
             </li>
             <li>
@@ -522,15 +515,11 @@
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Conecta las cámaras IP a la central receptora de alarmas de ADT para una mayor protección.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Solo tú podrás conectarte y visualizar de forma segura tus cámaras con encriptación de nivel bancario.
+              Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -539,7 +528,7 @@
       </div>
 
       <!-- CARD 3 -->
-      <div class="serv-card" style="width: 320px !important; height: 950px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+      <div class="serv-card" style="width: 320px !important; height: 1100px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
         <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">CONECTIVIDAD</h3>
         <img
           class="serv-photo"
@@ -585,7 +574,7 @@
     <img class="hidden-xs" src="assets/img/banner-seguridad-adt.png" alt="APP ADT Smart Security" />
     <img class="hidden-lg hidden-xs w-100 h-auto" src="assets/img/BANNER APP.png" alt="APP ADT Smart Security" />
     <div class="banner-text">
-      <p style="color: #245FA4; font-size: 22px !important;" class="banner-title">
+      <p style="color: #245FA4; font-size: 29px !important;" class="banner-title">
         <strong>Con nuestra App ADT Smart Security-</strong>
         Tu hogar en tu mano
       </p>
@@ -649,7 +638,7 @@
             inteligente
           </li>
         </ul>
-        <img src="assets/img/btn-estrella.png" class="estrella" />
+        <button onclick="docCookies.setItem('idform', 'formulario-seguridad-integral'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-seguridad-integral'});" class="btn-primary btn-protegete" data-click2call="7" style="margin-top: 20px;">Me Interesa</button>
       </div>
     </div>
   </div>
@@ -673,10 +662,11 @@
     </div>
     <div class="oferta-especial">
       <div class="precio">
-        <span>19,<span style="font-size: 30px">90 €/mes</span></span>
+        <span>19,<span style="font-size: 30px">90 €/mes*</span></span>
+        <p style="font-style: italic; font-size: 12px; margin-top: 5px; color: #666;">*<a href="assets/Bases/bases (1).pdf" download style="color: #666; text-decoration: underline; cursor: pointer;">Consulta las condiciones de la promoción</a></p>
       </div>
       <div class="detalles">
-        <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA*</span>
+        <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA</span>
       </div>
       <div>
         <button onclick="docCookies.setItem('idform', 'formulario-footer-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
@@ -689,7 +679,7 @@
           <img src="assets/img/logo-adt-footer.png" alt="logo ADT" />
         </div>
         <p>
-          <span><a href="assets/Bases/bases (1).pdf" download style="color: inherit; text-decoration: underline;">Condiciones de Promoción</a></span> -
+          <span><a href="assets/Bases/bases (1).pdf" download style="color: inherit; text-decoration: none;">Condiciones de Promoción</a></span> -
           <span id="privacidad-modal-footer" style="cursor: pointer">Política de Privacidad</span>-
           <span id="cookies-modal-footer" style="cursor: pointer">Política de Cookies</span>
         </p>
@@ -713,7 +703,7 @@
           id="cierre-modal-c2c-btn"
           class="btn-close btn-close-white btn-close-modal btn-medir c2c"
           style="position: absolute; top: 8px; right: 8px; width: 18px; height: 18px; font-size: 18px; font-weight: bold;">×</div>
-        <p class="c2c-title" style="margin: 0; font-size: 18px; font-weight: bold; text-transform: uppercase; color: white; font-family: 'Roboto Condensed', sans-serif;">Instalación GRATUITA*</p>
+        <p class="c2c-title" style="margin: 0; font-size: 18px; font-weight: bold; text-transform: uppercase; color: white; font-family: 'Roboto Condensed', sans-serif;">Instalación GRATUITA</p>
       </div>
       
       <!-- Sección azul con precio -->
