@@ -1623,7 +1623,7 @@
   <script src="assets/js/jquery-v3.5.1.min.js"></script>
   <script src="assets/js/bootstrap-v4.5.3.min.js"></script>
   <script src="assets/js/owl-carousel-v2.3.4.min.js"></script>
-  <script src="assets/js/gestionar-cookies.js"></script>
+  <!-- <script src="assets/js/gestionar-cookies.js"></script> -->
   <script src="assets/js/captura-parametros.js"></script>
   <script src="assets/js/config.js"></script>
   <script src="assets/js/functions.js"></script>
@@ -1632,8 +1632,15 @@
   <script>
     // Inicializar el sistema de cookies ADT
     document.addEventListener('DOMContentLoaded', function() {
-      const cookiesManager = new ADTCookiesManager();
-      cookiesManager.init();
+      console.log('DOM cargado, inicializando cookies...');
+      try {
+        const cookiesManager = new ADTCookiesManager();
+        console.log('ADTCookiesManager creado:', cookiesManager);
+        cookiesManager.init();
+        console.log('Cookies inicializadas');
+      } catch (error) {
+        console.error('Error inicializando cookies:', error);
+      }
     });
   </script>
 
