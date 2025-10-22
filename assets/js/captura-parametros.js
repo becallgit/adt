@@ -32,6 +32,23 @@ $(function(){
                 let fclid = element.split('=', 2)[1];
                 docCookies.setItem('adt_fclid', fclid);
             }
+            // Capturar parámetros específicos de la campaña
+            if (element.indexOf('campaignid=') > -1){
+                let campaignid = element.split('=', 2)[1];
+                docCookies.setItem('adt_campaignid', campaignid);
+            }
+            if (element.indexOf('adgroupid=') > -1){
+                let adgroupid = element.split('=', 2)[1];
+                docCookies.setItem('adt_adgroupid', adgroupid);
+            }
+            if (element.indexOf('keyword=') > -1){
+                let keyword = element.split('=', 2)[1];
+                docCookies.setItem('adt_keyword', keyword);
+            }
+            if (element.indexOf('adId=') > -1){
+                let adId = element.split('=', 2)[1];
+                docCookies.setItem('adt_adId', adId);
+            }
         });
     }
 });

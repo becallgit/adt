@@ -89,6 +89,12 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                 url += 'fuente=' + docCookies.getItem('adt_fuente') + '&';
             if (docCookies.hasItem('adt_campaign'))
                 url += 'campanaId=' + docCookies.getItem('adt_campaign') + '&';
+            if (docCookies.hasItem('adt_medium'))
+                url += 'medium=' + docCookies.getItem('adt_medium') + '&';
+            if (docCookies.hasItem('adt_term'))
+                url += 'term=' + docCookies.getItem('adt_term') + '&';
+            if (docCookies.hasItem('adt_content'))
+                url += 'content=' + docCookies.getItem('adt_content') + '&';
             if (docCookies.hasItem('adt_gclid'))
                 url += 'gclid=' + docCookies.getItem('adt_gclid') + '&';
             if (docCookies.hasItem('adt_fclid'))
@@ -106,6 +112,12 @@ function makeClick2Call(telefono, checked, type, click2callId) {
             url += 'telefono=' + telefono + '&servicio=' + servicio;
             
             console.log('URL completa:', url);
+            console.log('Parámetros capturados:', {
+                campaignid: docCookies.getItem('adt_campaignid'),
+                adgroupid: docCookies.getItem('adt_adgroupid'),
+                keyword: docCookies.getItem('adt_keyword'),
+                adId: docCookies.getItem('adt_adId')
+            });
             
             // Realizar llamada AJAX GET al backend
             $.ajax({
@@ -130,7 +142,26 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                     if (response && response.success) {
                         handleSuccessResponse(response, type, click2callId);
                     } else {
-                        handleErrorResponse(null, 'error', response.error || 'Error del servidor', type);
+                        // Si el backend devuelve success: false, mostrar el mensaje de error específico
+                        const config = getConfig();
+                        let errorMessage = response.error || config.messages.error;
+                        
+                        // Verificar si es un registro duplicado
+                        if (response.error && response.error.includes('duplicado')) {
+                            errorMessage = 'Este teléfono ya está registrado. Nuestro equipo se pondrá en contacto contigo pronto.';
+                        }
+                        
+                        // Ocultar el indicador de carga
+                        $('#c2c-formu-resp' + type).hide();
+                        
+                        // Mostrar mensaje de error específico del backend
+                        $('#c2c-form-msg' + type).html(errorMessage).show();
+                        $('#c2c-form-msg' + type).css({ 'color': 'red', 'font-weight': 'bold' });
+                        
+                        // Restaurar formulario después de un tiempo
+                        setTimeout(function() {
+                            $('#c2c-form-msg' + type).html('&nbsp;').hide();
+                        }, 5000);
                     }
                 },
                 error: function(xhr, status, error) {
@@ -138,6 +169,26 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                     console.error('Status:', status);
                     console.error('Response:', xhr.responseText);
                     console.error('XHR:', xhr);
+                    
+                    // Manejar específicamente el error 403 (registro duplicado)
+                    if (xhr.status === 403) {
+                        const config = getConfig();
+                        let errorMessage = 'Este teléfono ya está registrado. Nuestro equipo se pondrá en contacto contigo pronto.';
+                        
+                        // Ocultar el indicador de carga
+                        $('#c2c-formu-resp' + type).hide();
+                        
+                        // Mostrar mensaje específico para registro duplicado
+                        $('#c2c-form-msg' + type).html(errorMessage).show();
+                        $('#c2c-form-msg' + type).css({ 'color': 'orange', 'font-weight': 'bold' });
+                        
+                        // Restaurar formulario después de un tiempo
+                        setTimeout(function() {
+                            $('#c2c-form-msg' + type).html('&nbsp;').hide();
+                        }, 5000);
+                        return;
+                    }
+                    
                     handleErrorResponse(xhr, status, error, type);
                 }
             });

@@ -1185,8 +1185,10 @@
     
     /* Mantener el posicionamiento original del texto */
     .banner-text {
-        left: 63% !important;
+        left: 54% !important;
         transform: translate(-50%, -50%) !important;
+        width: 400px !important;
+        top: 55% !important;
     }
 }
 

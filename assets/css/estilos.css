@@ -1548,9 +1548,9 @@ button:disabled {
   position: absolute;
   /* posición sobre la imagen */
   top: 55%;
-  /* verticalmente centrado */
-  left: 63%;
-  /* horizontalmente centrado */
+  /* bajado más */
+  left: 54%;
+  /* un poco más a la derecha */
   transform: translate(-50%, -50%);
   /* centrar exacto */
   color: white;
@@ -1558,13 +1558,56 @@ button:disabled {
   font-size: 35px;
   /* tamaño del texto */
   text-align: left;
-
+  width: 400px;
+  /* ancho fijo para ocupar más espacio */
 }
 
-/* Restaurar tamaño original del título para escritorio */
+.banner-text .banner-title {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Mostrar texto promocional solo en móvil */
+@media (max-width: 768px) {
+  .mobile-promo-text {
+    display: block !important;
+    margin-top: 10px !important;
+    position: relative !important;
+    order: 999 !important;
+    z-index: 1 !important;
+  }
+  
+  .figma-form {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .figma-form-button {
+    order: 1 !important;
+  }
+  
+  /* Espacio entre título y texto en Seguridad Integral para móvil */
+  .integral-content h2 {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* Espacio adicional entre título y texto en Seguridad Integral para escritorio */
 @media (min-width: 769px) {
+  .integral-content h2 {
+    margin-bottom: 25px !important;
+  }
+  
   .banner-text .banner-title {
-    font-size: 22px !important;
+    font-size: 29px !important;
+    line-height: 1.0 !important;
+    white-space: nowrap !important;
+    padding-bottom: 20px !important;
+  }
+  
+  .banner-text .list-app {
+    margin-top: -15px !important;
   }
 }
 
@@ -1578,24 +1621,39 @@ button:disabled {
 .banner-text button {
   position: relative;
   /* relativo a .banner-text */
-  top: -50px;
-  /* sube el botón 20px hacia arriba */
-  left: 360px;
-  /* mueve el botón hacia la derecha dentro del bloque */
+  top: -30px;
+  /* baja el botón un poco */
+  left: 0;
+  /* centrado */
+  margin: 0 auto;
+  /* centrar el botón */
+  display: block;
+  /* hacer que el margin auto funcione */
   background-color: white;
   color: #245FA4;
   border: none;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
-  padding: 13px 30px;
+  padding: 8px 25px;
 }
 
 .banner-text .list-app {
   width: 100%;
-  margin-left: auto;
-  /* mantiene el borde derecho alineado */
+  text-align: left;
+  /* justificar lista a la izquierda */
+  margin-left: 0;
+  /* eliminar margen izquierdo */
+  padding-left: 0;
+  /* eliminar padding izquierdo */
+  margin-top: -15px;
+  /* reducir espacio con el título */
+}
+
+.banner-text .list-app li {
+  margin-bottom: -5px;
+  /* reducir espacio entre elementos de la lista */
 }
 
 /* Media queries para banner-app - imagen más pequeña que contenedor */
