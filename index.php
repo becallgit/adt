@@ -9,6 +9,7 @@
   <link href="assets/css/bootstrap-v4.5.3.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/estilos.css" />
   <link rel="stylesheet" href="assets/css/estilos_extras.css" />
+  <link rel="stylesheet" href="assets/css/cookies-adt.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -20,6 +21,33 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
+
+  <style>
+    /* Responsive styles for App ADT title */
+    @media (max-width: 1200px) {
+      .banner-text p {
+        font-size: 20px !important;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .banner-text p {
+        font-size: 18px !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .banner-text p {
+        font-size: 16px !important;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .banner-text p {
+        font-size: 14px !important;
+      }
+    }
+  </style>
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -103,8 +131,11 @@
       class="alamar-movil hidden-lg" />
 
     <div class="hero-content">
-      <div class="offer">
+      <div class="offer" style="position: relative;">
         <img src="assets/img/oferta-ADT.png" alt="oferta-ADT" class="hidden-sm hidden-xs" />
+        <p style="font-style: italic; font-size: 12px; color: white; text-align: center; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 100%;" class="hidden-sm hidden-xs">
+          *19,90€ con iva incluido durante los 4 primeros meses sobre el precio tarifa del paquete elegido. Después desde 42,35€/mes IVA incluido. Instalación y alta gratis en paquetes ADT para hogar. Servicio ADT help incluido de acuerdo con las <a href="assets/Bases/bases (1).pdf" download style="color: white; text-decoration: underline;">condiciones de promoción</a>.
+        </p>
       </div>
 
       <!-- CTA Principal -->
@@ -147,14 +178,14 @@
         </button>
         
         <!-- Texto legal DGP según Figma -->
-        <p class="figma-form-legal">
+        <p class="figma-form-legal hidden-xs">
           ADT es una empresa de Seguridad homologada, inscrita en el Registro
           de Seguridad de la DGP con el nº 2817
         </p>
         
         <!-- Mensajes de respuesta -->
         <p id="c2c-form-msg-banner" class="c2c-form-msg">&nbsp;</p>
-        <div id="c2c-formu-resp-banner" class="c2c-form-resp"></div>
+        <div id="c2c-formu-resp-banner" class="c2c-formu-resp"></div>
       </div>
       
       <!-- Imagen CTA debajo del formulario solo en móvil -->
@@ -189,9 +220,9 @@
   </div>
 
   <div class="proteccion">
-    <p class="porque">¿Por qué elegirnos?</p>
+    <p class="porque">¿Por qué elegir ADT?</p>
     <p class="segundop">
-      Porque no todas las alarmas te cuidan de verdad.
+      La diferencia entre sonar una alarma y estar protegido.
       <strong>ADT te ofrece seguridad real</strong>
     </p>
     <br />
@@ -212,7 +243,7 @@
             <img src="assets/img/instalacion-adt-icon.png" alt="icono" />
           </div>
           <h4>Instalación profesional</h4>
-          <p>Nuestros técnicos dejan tu hogar protegido desde el primer día.</p>
+          <p>Nuestros técnicos dejan tu hogar protegido.</p>
           <span class="destacado">Instalación rápida, segura y garantizada</span>
         </div>
         <div class="card">
@@ -231,7 +262,7 @@
           </div>
           <h4>ADT Help</h4>
           <p>Pide ayuda inmediata en caso de urgencia, estés dónde estés.</p>
-          <span class="destacado">Con nuestra AppSmart Security</span>
+          <span class="destacado">Con nuestra App ADT Smart Security</span>
         </div>
       </div>
 
@@ -250,7 +281,7 @@
             <img src="assets/img/instalacion-adt-icon.png" alt="icono" />
           </div>
           <h4>Instalación profesional</h4>
-          <p>Nuestros técnicos dejan tu hogar protegido desde el primer día.</p>
+          <p>Nuestros técnicos dejan tu hogar protegido.</p>
           <span class="destacado">Instalación rápida, segura y garantizada</span>
         </div>
         <div class="card">
@@ -269,7 +300,7 @@
           </div>
           <h4>ADT Help</h4>
           <p>Pide ayuda inmediata en caso de urgencia, estés dónde estés.</p>
-          <span class="destacado">Con nuestra AppSmart Security</span>
+          <span class="destacado">Con nuestra App ADT Smart Security</span>
         </div>
       </div>
 
@@ -301,24 +332,28 @@
           <p>Tu hogar o negocio protegido 24/7 desde cualquier lugar</p>
           <ul class="serv-list">
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Panel de
-              control inteligente
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Sensores
-              de apertura y detectores de movimiento
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Protección con sensores de apertura y cierre y detectores de movimiento.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Activación y desactivación desde app en tu móvil
+              Conexión o desconexión de tu alarma desde tu móvil
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Detección de inhibición
+              Programa un autoarmado y/o autodesarmado.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Mantenimiento remoto
+              Recordatorios de conexión de tu alarma según tus rutinas.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Visualización de clips de vídeo para ver los saltos de alarma.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Gestión inteligente de usuarios.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -328,7 +363,7 @@
 
       <!-- CARD 2 -->
       <div class="serv-card">
-        <h3>SEGURIDAD Y VIGILANCIA</h3>
+        <h3>VÍDEO INTELIGENCIA</h3>
         <img
           class="serv-photo"
           src="assets/img/fondo-vigilancia.png"
@@ -341,24 +376,28 @@
           <p>Suma videointeligencia y controla tu casa en tiempo real.</p>
           <ul class="serv-list">
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Video HD
-              en tiempo real
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Graba y visualiza en alta definición tus eventos de alarma.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Comunicación bidireccional
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Alertas
-              personalizadas
+              Recibe notificaciones "push" con clips de vídeo cuando haya alguna actividad en tu hogar.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Detección inteligente de movimiento
+              Define qué eventos deseas grabar y almacénalos de forma segura en la nube.
             </li>
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
-              total desde cualquier lugar
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Conecta las cámaras IP a la central receptora de alarmas de ADT para una mayor protección.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Solo tú podrás conectarte y visualizar de forma segura tus cámaras con encriptación de nivel bancario.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -368,7 +407,7 @@
 
       <!-- CARD 3 -->
       <div class="serv-card">
-        <h3>SEGURIDAD/VIDEOVIGILANCIA/<br />CONECTIVIDAD</h3>
+        <h3>CONECTIVIDAD</h3>
         <img
           class="serv-photo"
           src="assets/img/fondo_domotica.png"
@@ -382,23 +421,23 @@
           <ul class="serv-list">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Videovigilancia avanzada
+              Comodidad y ahorro con el Termostato inteligente, con ajuste automático y control desde tu móvil.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Conectividad y domótica
+              Control de la iluminación con encendido y apagado de luces programable.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Programación de encentido y apagado de electrodomésticos
+              Programa tus electrodomésticos y otros dispositivos.
             </li>
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Gestión
-              centralizada en la app
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Controla la apertura y cierre de puertas.
             </li>
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Panel
-              inteligente
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Deja que tu alarma inteligente haga las cosas por ti a través de reglas, horarios, escenas y geo-servicios.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -410,7 +449,7 @@
     <!-- Mobile: Sin carrusel -->
     <div id="servicios-mobile" class="servicios-mobile hidden-lg" style="padding: 20px 7px !important; background-color: #F5F5F5 !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important; margin-top: -40px !important;">
       <!-- CARD 1 -->
-      <div class="serv-card" style="width: 320px !important; height: 800px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+      <div class="serv-card" style="width: 320px !important; height: 950px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
         <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">SEGURIDAD</h3>
         <img
           class="serv-photo"
@@ -425,24 +464,28 @@
           <p style="margin: 0 !important; padding: 0 !important; margin-bottom: 0 !important; line-height: 1.2 !important; font-size: 18px !important;">Tu hogar o negocio protegido 24/7 desde cualquier lugar</p>
           <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Panel de
-              control inteligente
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Sensores
-              de apertura y detectores de movimiento
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Protección con sensores de apertura y cierre y detectores de movimiento.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Activación y desactivación desde app en tu móvil
+              Conexión o desconexión de tu alarma desde tu móvil
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Detección de inhibición
+              Programa un autoarmado y/o autodesarmado.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Mantenimiento remoto
+              Recordatorios de conexión de tu alarma según tus rutinas.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Visualización de clips de vídeo para ver los saltos de alarma.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Gestión inteligente de usuarios.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -451,38 +494,43 @@
       </div>
 
       <!-- CARD 2 -->
-      <div class="serv-card">
-        <h3>SEGURIDAD Y VIGILANCIA</h3>
+      <div class="serv-card" style="width: 320px !important; height: 1100px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+        <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">VÍDEO INTELIGENCIA</h3>
         <img
           class="serv-photo"
           src="assets/img/fondo-vigilancia.png"
-          alt="protección negocio" />
-        <div class="content">
+          alt="protección negocio" 
+          style="width: 100% !important; height: 180px !important; object-fit: cover !important; margin: 0 !important;" />
+        <div class="content" style="padding: 30px !important; text-align: left !important;">
           <img
             class="serv-icon"
             src="assets/img/camara-seguridad.icon.png"
             alt="icono cámara" />
-          <p>Suma videointeligencia y controla tu casa en tiempo real.</p>
-          <ul class="serv-list">
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: 0 !important; line-height: 1.2 !important; font-size: 18px !important;">Suma videointeligencia y controla tu casa en tiempo real.</p>
+          <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Video HD
-              en tiempo real
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Graba y visualiza en alta definición tus eventos de alarma.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Comunicación bidireccional
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Alertas
-              personalizadas
+              Recibe notificaciones "push" con clips de vídeo cuando haya alguna actividad en tu hogar.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Detección inteligente de movimiento
+              Define qué eventos deseas grabar y almacénalos de forma segura en la nube.
             </li>
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
-              total desde cualquier lugar
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Conecta las cámaras IP a la central receptora de alarmas de ADT para una mayor protección.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Solo tú podrás conectarte y visualizar de forma segura tus cámaras con encriptación de nivel bancario.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -491,38 +539,39 @@
       </div>
 
       <!-- CARD 3 -->
-      <div class="serv-card">
-        <h3>SEGURIDAD/VIDEOVIGILANCIA/<br />CONECTIVIDAD</h3>
+      <div class="serv-card" style="width: 320px !important; height: 950px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+        <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">CONECTIVIDAD</h3>
         <img
           class="serv-photo"
           src="assets/img/fondo_domotica.png"
-          alt="ADT Help" />
-        <div class="content">
+          alt="ADT Help" 
+          style="width: 100% !important; height: 180px !important; object-fit: cover !important; margin: 0 !important;" />
+        <div class="content" style="padding: 30px !important; text-align: left !important;">
           <img
             class="serv-icon"
             src="assets/img/adt_conectividad.png"
             alt="icono help" />
-          <p>Disfruta de mayor comodidad en tu vivienda.</p>
-          <ul class="serv-list">
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: 0 !important; line-height: 1.2 !important; font-size: 18px !important;">Disfruta de mayor comodidad en tu vivienda.</p>
+          <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
             <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
-              de iluminación inteligente
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Comodidad y ahorro con el Termostato inteligente, con ajuste automático y control desde tu móvil.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Gestión de persianas y toldos
-           </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Control
-              de climatización
+              Control de la iluminación con encendido y apagado de luces programable.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Gestión de electrodomésticos
+              Programa tus electrodomésticos y otros dispositivos.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Escenas personalizadas
+              Controla la apertura y cierre de puertas.
+            </li>
+            <li>
+              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
+              Deja que tu alarma inteligente haga las cosas por ti a través de reglas, horarios, escenas y geo-servicios.
             </li>
           </ul>
           <span class="smart-arming">Smart Arming INCLUIDO</span>
@@ -533,36 +582,36 @@
   </div>
 
   <div class="banner-app">
-    <img class="hidden-xs" src="assets/img/banner-seguridad-adt.png" alt="APP smart Security" />
-    <img class="hidden-lg w-100 h-auto" src="assets/img/BANNER APP.png" alt="APP smart Security" />
+    <img class="hidden-xs" src="assets/img/banner-seguridad-adt.png" alt="APP ADT Smart Security" />
+    <img class="hidden-lg hidden-xs w-100 h-auto" src="assets/img/BANNER APP.png" alt="APP ADT Smart Security" />
     <div class="banner-text">
-      <p>
-        <strong>Con nuestra App Smart Security-</strong>
+      <p style="color: #245FA4; font-size: 22px !important;" class="banner-title">
+        <strong>Con nuestra App ADT Smart Security-</strong>
         Tu hogar en tu mano
       </p>
-      <ul class="list-app">
+      <ul class="list-app" style="font-size: 0.6em !important;">
         <li>
           <img src="assets/img/adt-check-blanco.png" alt="check" />
-          Videovigilancia avanzada
+          Controla todos los dispositivos conectados
         </li>
         <li>
           <img src="assets/img/adt-check-blanco.png" alt="check" />
-          Conectividad y domótica
+          Activa acciones por órdenes de voz como conectar o desconectar o ver cámara.
         </li>
         <li>
           <img src="assets/img/adt-check-blanco.png" alt="check" />
-          Programación de encentido y apagado de electrodomésticos
-0000        </li>
-        <li>
-          <img src="assets/img/adt-check-blanco.png" alt="check" /> Gestión
-          centralizada en la app
+          Recibe alertas y recordatorios mediante notificaciones «push»
         </li>
         <li>
-          <img src="assets/img/adt-check-blanco.png" alt="check" /> Panel
-          inteligente
+          <img src="assets/img/adt-check-blanco.png" alt="check" />
+          Genera avisos de emergencia estés donde estés.
+        </li>
+        <li>
+          <img src="assets/img/adt-check-blanco.png" alt="check" />
+          Gestión inteligente de usuarios. Crea y edita diferentes perfiles.
         </li>
       </ul>
-      <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6">INFÓRMATE AQUÍ</button>
+      <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6" style="margin-top: 40px !important;">INFÓRMATE AQUÍ</button>
     </div>
   </div>
 
@@ -627,7 +676,7 @@
         <span>19,<span style="font-size: 30px">90 €/mes</span></span>
       </div>
       <div class="detalles">
-        <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA</span>
+        <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA*</span>
       </div>
       <div>
         <button onclick="docCookies.setItem('idform', 'formulario-footer-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
@@ -640,7 +689,7 @@
           <img src="assets/img/logo-adt-footer.png" alt="logo ADT" />
         </div>
         <p>
-          <span>Aviso legal</span> -
+          <span><a href="assets/Bases/bases (1).pdf" download style="color: inherit; text-decoration: underline;">Condiciones de Promoción</a></span> -
           <span id="privacidad-modal-footer" style="cursor: pointer">Política de Privacidad</span>-
           <span id="cookies-modal-footer" style="cursor: pointer">Política de Cookies</span>
         </p>
@@ -664,7 +713,7 @@
           id="cierre-modal-c2c-btn"
           class="btn-close btn-close-white btn-close-modal btn-medir c2c"
           style="position: absolute; top: 8px; right: 8px; width: 18px; height: 18px; font-size: 18px; font-weight: bold;">×</div>
-        <p class="c2c-title" style="margin: 0; font-size: 18px; font-weight: bold; text-transform: uppercase; color: white; font-family: 'Roboto Condensed', sans-serif;">Instalación GRATUITA</p>
+        <p class="c2c-title" style="margin: 0; font-size: 18px; font-weight: bold; text-transform: uppercase; color: white; font-family: 'Roboto Condensed', sans-serif;">Instalación GRATUITA*</p>
       </div>
       
       <!-- Sección azul con precio -->
@@ -833,7 +882,7 @@
           de que este sitio web, al igual que la mayoría de los sitios en
           Internet, usa Cookies para mejorar y optimizar la experiencia del
           usuario. A continuación encontrará información detallada sobre qué
-          son las “Cookies”, qué tipología utiliza este sitio web, cómo
+          son las "Cookies", qué tipología utiliza este sitio web, cómo
           cambiar la configuración de sus cookies, y qué ocurre si deshabilita
           las Cookies.
           <br /><br />
@@ -957,8 +1006,8 @@
           rgpd@becallgroup.com
           <br />
           <br />La presente Política de Privacidad regula el acceso y el uso
-          del servicio de BE CALL BPO, S.L. (también nombrado como “BE CALL”,
-          “BE CALL GROUP” o “EL GRUPO”) poniendo a disposición del usuario (en
+          del servicio de BE CALL BPO, S.L. (también nombrado como "BE CALL",
+          "BE CALL GROUP" o "EL GRUPO") poniendo a disposición del usuario (en
           adelante, el "Usuario") de Internet interesado en los servicios (en
           adelante, los "Servicios") y contenidos (en adelante, los
           "Contenidos") ofrecidos por BE CALL BPO, S.L. (en adelante, los
@@ -985,7 +1034,7 @@
           tratamientos que podemos realizar con tus datos personales a fin de
           que puedas tomar una decisión al respecto. En el tratamiento de los
           datos personales por ti facilitados BE CALL BPO, S.L. (en adelante,
-          “BE CALL”, “LA EMPRESA” o “EL RESPONSABLE”, indistintamente), se
+          "BE CALL", "LA EMPRESA" o "EL RESPONSABLE", indistintamente), se
           seguirán los principios de Transparencia, Licitud, Responsabilidad
           Proactiva, Minimización de los datos, Seudonimización y
           Eliminación.<br />
@@ -1277,8 +1326,8 @@
           rgpd@becallgroup.com
           <br />
           <br />La presente Política de Privacidad regula el acceso y el uso
-          del servicio de BE CALL BPO, S.L. (también nombrado como “BE CALL”,
-          “BE CALL GROUP” o “EL GRUPO”) poniendo a disposición del usuario (en
+          del servicio de BE CALL BPO, S.L. (también nombrado como "BE CALL",
+          "BE CALL GROUP" o "EL GRUPO") poniendo a disposición del usuario (en
           adelante, el "Usuario") de Internet interesado en los servicios (en
           adelante, los "Servicios") y contenidos (en adelante, los
           "Contenidos") ofrecidos por BE CALL BPO, S.L. (en adelante, los
@@ -1305,7 +1354,7 @@
           tratamientos que podemos realizar con tus datos personales a fin de
           que puedas tomar una decisión al respecto. En el tratamiento de los
           datos personales por ti facilitados BE CALL BPO, S.L. (en adelante,
-          “BE CALL”, “LA EMPRESA” o “EL RESPONSABLE”, indistintamente), se
+          "BE CALL", "LA EMPRESA" o "EL RESPONSABLE", indistintamente), se
           seguirán los principios de Transparencia, Licitud, Responsabilidad
           Proactiva, Minimización de los datos, Seudonimización y
           Eliminación.<br />
@@ -1588,6 +1637,7 @@
   <script src="assets/js/captura-parametros.js"></script>
   <script src="assets/js/config.js"></script>
   <script src="assets/js/functions.js"></script>
+  <script src="assets/js/cookies-adt.js"></script>
 
   <script>
     let params = location.search;
@@ -1641,8 +1691,10 @@
       $(".btn-close.legales, .modal-back.legales").on("click", function() {
         closeModal("legales");
       });
+      // Sistema de cookies mejorado - mantener compatibilidad
       setTimeout(function() {
-        if (!checkCookie()) {
+        // Solo mostrar el banner antiguo si el nuevo sistema no está disponible
+        if (typeof adtCookiesManager === 'undefined' && !checkCookie()) {
           $("#cookies-notice").addClass("cookies-notice-open");
           $("#cookies-notice").removeClass("cookies-notice-close");
         }

@@ -454,23 +454,64 @@ button:disabled {
   }
 
   .banner-app {
-    background: #0056a5;
+    background: url("../img/BANNER APP.png") center/cover no-repeat;
+    background-size: cover;
+    background-position: center top;
+    min-height: 700px;
+    height: auto;
   }
 
   .banner-app .banner-text {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    /* text-align: center; */
-    margin-top: 20px;
-    font-size: 36px !important;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 0;
+    font-size: 24px !important;
     padding: 0 20px;
+    width: 100%;
+    color: white !important;
+  }
+
+  .banner-app .banner-text .banner-title {
+    color: white !important;
+    font-size: 16px !important;
+  }
+
+  .banner-app .banner-text .list-app {
+    font-size: 0.9em !important;
+  }
+
+  .banner-app .banner-text .list-app li {
+    font-size: 0.9em !important;
   }
 
   .banner-app .banner-text button {
-    top: -10px;
+    top: -59px;
     left: 80px;
+    font-size: 14px !important;
+    padding: 8px 20px !important;
+  }
+
+  /* Ajustes específicos para resolución 344x882 */
+  @media (max-width: 400px) and (max-height: 900px) {
+    .banner-app .banner-text .banner-title {
+      font-size: 12px !important;
+    }
+    
+    .banner-app .banner-text .list-app {
+      font-size: 0.9em !important;
+    }
+    
+    .banner-app .banner-text .list-app li {
+      font-size: 0.9em !important;
+    }
+    
+    .banner-app .banner-text button {
+      font-size: 12px !important;
+      padding: 6px 16px !important;
+    }
   }
 
   .parent-integral {
@@ -1518,6 +1559,20 @@ button:disabled {
   /* tamaño del texto */
   text-align: left;
 
+}
+
+/* Restaurar tamaño original del título para escritorio */
+@media (min-width: 769px) {
+  .banner-text .banner-title {
+    font-size: 22px !important;
+  }
+}
+
+/* Texto más pequeño para resolución 1400px */
+@media (min-width: 1400px) and (max-width: 1400px) {
+  .figma-form-legal {
+    font-size: 10px !important;
+  }
 }
 
 .banner-text button {
