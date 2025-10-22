@@ -1630,6 +1630,14 @@
   <script src="assets/js/cookies-adt.js"></script>
 
   <script>
+    // Inicializar el sistema de cookies ADT
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookiesManager = new ADTCookiesManager();
+      cookiesManager.init();
+    });
+  </script>
+
+  <script>
     let params = location.search;
     let pageActive = "index";
     $(function() {
