@@ -122,7 +122,8 @@
     <img
       src="assets/img/alarmas-adt.png"
       alt="alarmas-adt"
-      class="alarmas-adt hidden-xs" />
+      class="alarmas-adt hidden-xs"
+      style="width: 100%; height: auto; object-fit: cover; min-height: 600px;" />
     
     <!-- Banner Móvil -->
     <img
@@ -133,8 +134,8 @@
     <div class="hero-content">
       <div class="offer" style="position: relative;">
         <img src="assets/img/oferta-ADT.png" alt="oferta-ADT" class="hidden-sm hidden-xs" />
-        <p style="font-style: italic; font-size: 12px; color: white; text-align: center; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); width: 100%;" class="hidden-sm hidden-xs">
-          *19,90€ con iva incluido durante los 4 primeros meses sobre el precio tarifa del paquete elegido. Después desde 42,35€/mes IVA incluido. Instalación y alta gratis en paquetes ADT para hogar. Servicio ADT help incluido de acuerdo con las <a href="assets/Bases/bases (1).pdf" download style="color: white; text-decoration: underline;">condiciones de promoción</a>.
+        <p style="font-style: italic; font-size: 14px; color: #000; text-align: center; margin-top: 30px; width: 100%;" class="hidden-sm hidden-xs">
+          *19,90€ con iva incluido durante los 4 primeros meses sobre el precio tarifa del paquete elegido. Después desde 42,35€/mes IVA incluido. Instalación y alta gratis en paquetes ADT para hogar. Servicio ADT help incluido de acuerdo con las <a href="assets/Bases/bases (1).pdf" download style="color: #000; text-decoration: underline;">condiciones de promoción</a>.
         </p>
       </div>
 
@@ -333,8 +334,9 @@
           <img
             class="serv-icon"
             src="assets/img/icono_seguridad.png"
-            alt="icono seguridad" />
-          <p>Tu hogar o negocio protegido 24/7 desde cualquier lugar</p>
+            alt="icono seguridad" 
+            style="margin-top: -10px !important;" />
+          <p style="margin-bottom: 5px !important;">Tu hogar o negocio protegido 24/7 desde cualquier lugar</p>
           <ul class="serv-list">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
@@ -361,7 +363,7 @@
               Gestión inteligente de usuarios.
             </li>
           </ul>
-          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <span class="smart-arming" style="margin-top: 15px !important; display: block !important;">Smart Arming INCLUIDO</span>
           <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio1">PROTÉGETE AHORA</button>
         </div>
       </div>
@@ -377,8 +379,9 @@
           <img
             class="serv-icon"
             src="assets/img/camara-seguridad.icon.png"
-            alt="icono cámara" />
-          <p>Suma videointeligencia y controla tu casa en tiempo real.</p>
+            alt="icono cámara" 
+            style="margin-top: -10px !important;" />
+          <p style="margin-bottom: 5px !important;">Suma videointeligencia y controla tu casa en tiempo real.</p>
           <ul class="serv-list">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
@@ -397,7 +400,7 @@
               Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
             </li>
           </ul>
-          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <span class="smart-arming" style="margin-top: 15px !important; display: block !important;">Smart Arming INCLUIDO</span>
           <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio2">PROTÉGETE AHORA</button>
         </div>
       </div>
@@ -413,8 +416,9 @@
           <img
             class="serv-icon"
             src="assets/img/adt_conectividad.png"
-            alt="icono help" />
-          <p>Disfruta de mayor comodidad en tu vivienda.</p>
+            alt="icono help" 
+            style="margin-top: -10px !important;" />
+          <p style="margin-bottom: 5px !important;">Disfruta de mayor comodidad en tu vivienda.</p>
           <ul class="serv-list">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
@@ -437,7 +441,7 @@
               Deja que tu alarma inteligente haga las cosas por ti a través de reglas, horarios, escenas y geo-servicios.
             </li>
           </ul>
-          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <span class="smart-arming" style="margin-top: 15px !important; display: block !important;">Smart Arming INCLUIDO</span>
           <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio3">PROTÉGETE AHORA</button>
         </div>
       </div>
@@ -446,20 +450,21 @@
     <!-- Mobile: Sin carrusel -->
     <div id="servicios-mobile" class="servicios-mobile hidden-lg" style="padding: 20px 7px !important; background-color: #F5F5F5 !important; width: 100vw !important; margin-left: calc(-50vw + 50%) !important; margin-right: calc(-50vw + 50%) !important; margin-top: -40px !important;">
       <!-- CARD 1 -->
-      <div class="serv-card" style="width: 320px !important; height: 1100px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
-        <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">SEGURIDAD</h3>
+      <div class="serv-card" style="width: 320px !important; height: 850px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 15px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+        <h3 style="margin: 0 !important; padding: 12px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important; min-height: auto !important; display: block !important; align-items: unset !important; justify-content: unset !important;">SEGURIDAD</h3>
         <img
           class="serv-photo"
           src="assets/img/fondo-segurida.png"
           alt="protección hogar" 
-          style="width: 100% !important; height: 180px !important; object-fit: cover !important; margin: 0 !important;" />
-        <div class="content" style="padding: 30px !important; text-align: left !important;">
+          style="width: 100% !important; height: 120px !important; object-fit: cover !important; margin: 0 !important;" />
+        <div class="content" style="padding: 20px !important; text-align: left !important;">
           <img
             class="serv-icon"
             src="assets/img/icono_seguridad.png"
-            alt="icono seguridad" />
-          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: 0 !important; line-height: 1.2 !important; font-size: 18px !important;">Tu hogar o negocio protegido 24/7 desde cualquier lugar</p>
-          <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
+            alt="icono seguridad" 
+            style="margin-top: -10px !important;" />
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: -45px !important; line-height: 1.2 !important; font-size: 18px !important;">Tu hogar o negocio protegido 24/7 desde cualquier lugar</p>
+          <ul class="serv-list" style="margin: 0 !important; margin-top: -10px !important; padding: 0 !important; list-style: none !important; color: #000 !important;">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Protección con sensores de apertura y cierre y detectores de movimiento.
@@ -485,26 +490,27 @@
               Gestión inteligente de usuarios.
             </li>
           </ul>
-          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <span class="smart-arming" style="margin-top: 15px !important; display: block !important;">Smart Arming INCLUIDO</span>
           <button class="btn-primary serv-btn btn-protegete" data-click2call="3" data-servicio="servicio1">PROTÉGETE AHORA</button>
         </div>
       </div>
 
       <!-- CARD 2 -->
-      <div class="serv-card" style="width: 320px !important; height: 1100px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
-        <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">VÍDEO INTELIGENCIA</h3>
+      <div class="serv-card" style="width: 320px !important; height: 850px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 15px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+        <h3 style="margin: 0 !important; padding: 12px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important; min-height: auto !important; display: block !important; align-items: unset !important; justify-content: unset !important;">VÍDEO INTELIGENCIA</h3>
         <img
           class="serv-photo"
           src="assets/img/fondo-vigilancia.png"
           alt="protección negocio" 
-          style="width: 100% !important; height: 180px !important; object-fit: cover !important; margin: 0 !important;" />
-        <div class="content" style="padding: 30px !important; text-align: left !important;">
+          style="width: 100% !important; height: 120px !important; object-fit: cover !important; margin: 0 !important;" />
+        <div class="content" style="padding: 20px !important; text-align: left !important;">
           <img
             class="serv-icon"
             src="assets/img/camara-seguridad.icon.png"
-            alt="icono cámara" />
-          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: 0 !important; line-height: 1.2 !important; font-size: 18px !important;">Suma videointeligencia y controla tu casa en tiempo real.</p>
-          <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
+            alt="icono cámara" 
+            style="margin-top: -10px !important;" />
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: -45px !important; line-height: 1.2 !important; font-size: 18px !important;">Suma videointeligencia y controla tu casa en tiempo real.</p>
+          <ul class="serv-list" style="margin: 0 !important; margin-top: -10px !important; padding: 0 !important; list-style: none !important; color: #000 !important;">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Recibe notificaciones "push" con clips de vídeo cuando haya alguna actividad en tu hogar.
@@ -522,26 +528,27 @@
               Con la analítica de vídeo detecta y graba el movimiento de personas, mascotas o vehículos.
             </li>
           </ul>
-          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <span class="smart-arming" style="margin-top: 15px !important; display: block !important;">Smart Arming INCLUIDO</span>
           <button class="btn-primary serv-btn btn-protegete" data-click2call="4" data-servicio="servicio2">PROTÉGETE AHORA</button>
         </div>
       </div>
 
       <!-- CARD 3 -->
-      <div class="serv-card" style="width: 320px !important; height: 1100px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 20px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
-        <h3 style="margin: 0 !important; padding: 15px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">CONECTIVIDAD</h3>
+      <div class="serv-card" style="width: 320px !important; height: 850px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 0 15px 0 !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+        <h3 style="margin: 0 !important; padding: 12px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important; min-height: auto !important; display: block !important; align-items: unset !important; justify-content: unset !important;">CONECTIVIDAD</h3>
         <img
           class="serv-photo"
           src="assets/img/fondo_domotica.png"
           alt="ADT Help" 
-          style="width: 100% !important; height: 180px !important; object-fit: cover !important; margin: 0 !important;" />
-        <div class="content" style="padding: 30px !important; text-align: left !important;">
+          style="width: 100% !important; height: 120px !important; object-fit: cover !important; margin: 0 !important;" />
+        <div class="content" style="padding: 20px !important; text-align: left !important;">
           <img
             class="serv-icon"
             src="assets/img/adt_conectividad.png"
-            alt="icono help" />
-          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: 0 !important; line-height: 1.2 !important; font-size: 18px !important;">Disfruta de mayor comodidad en tu vivienda.</p>
-          <ul class="serv-list" style="margin: 0 !important; margin-top: -20px !important; padding: 0 !important; list-style: none !important;">
+            alt="icono help" 
+            style="margin-top: -10px !important;" />
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: -45px !important; line-height: 1.2 !important; font-size: 18px !important;">Disfruta de mayor comodidad en tu vivienda.</p>
+          <ul class="serv-list" style="margin: 0 !important; margin-top: -10px !important; padding: 0 !important; list-style: none !important; color: #000 !important;">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Comodidad y ahorro con el Termostato inteligente, con ajuste automático y control desde tu móvil.
@@ -563,7 +570,7 @@
               Deja que tu alarma inteligente haga las cosas por ti a través de reglas, horarios, escenas y geo-servicios.
             </li>
           </ul>
-          <span class="smart-arming">Smart Arming INCLUIDO</span>
+          <span class="smart-arming" style="margin-top: 15px !important; display: block !important;">Smart Arming INCLUIDO</span>
           <button class="btn-primary serv-btn btn-protegete" data-click2call="5" data-servicio="servicio3">PROTÉGETE AHORA</button>
         </div>
       </div>
@@ -578,7 +585,7 @@
         <strong>Con nuestra App ADT Smart Security-</strong>
         Tu hogar en tu mano
       </p>
-      <ul class="list-app" style="font-size: 0.6em !important;">
+      <ul class="list-app" style="font-size: 0.7em !important;">
         <li>
           <img src="assets/img/adt-check-blanco.png" alt="check" />
           Controla todos los dispositivos conectados
@@ -600,8 +607,13 @@
           Gestión inteligente de usuarios. Crea y edita diferentes perfiles.
         </li>
       </ul>
-      <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6" style="margin-top: 40px !important;">INFÓRMATE AQUÍ</button>
+      <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete hidden-xs" data-click2call="6" style="margin-top: 40px !important;">INFÓRMATE AQUÍ</button>
     </div>
+  </div>
+  
+  <!-- Sección móvil con fondo azul para el botón - FUERA del banner-app -->
+  <div class="hidden-lg" style="background-color: #0057A7; padding: 20px; text-align: center; margin-top: -1px;">
+    <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6" style="background-color: white !important; color: #0057A7 !important; border: 2px solid white !important;">INFÓRMATE AQUÍ</button>
   </div>
 
   <div class="parent-integral">
@@ -638,7 +650,7 @@
             inteligente
           </li>
         </ul>
-        <button onclick="docCookies.setItem('idform', 'formulario-seguridad-integral'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-seguridad-integral'});" class="btn-primary btn-protegete" data-click2call="7" style="margin-top: 20px;">Me Interesa</button>
+        <button onclick="docCookies.setItem('idform', 'formulario-seguridad-integral'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-seguridad-integral'});" class="btn-primary btn-protegete" data-click2call="7" style="margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">Me Interesa</button>
       </div>
     </div>
   </div>
@@ -663,10 +675,10 @@
     <div class="oferta-especial">
       <div class="precio">
         <span>19,<span style="font-size: 30px">90 €/mes*</span></span>
-        <p style="font-style: italic; font-size: 12px; margin-top: 5px; color: #666;">*<a href="assets/Bases/bases (1).pdf" download style="color: #666; text-decoration: underline; cursor: pointer;">Consulta las condiciones de la promoción</a></p>
       </div>
       <div class="detalles">
         <span>OFERTA ESPECIAL 4 meses + Instalación GRATUITA</span>
+        <p style="font-style: italic; font-size: 12px; margin-top: 5px; color: #666; text-align: center;">*<a href="assets/Bases/bases (1).pdf" download style="color: #666; text-decoration: underline; cursor: pointer;">Consulta las condiciones de la promoción</a></p>
       </div>
       <div>
         <button onclick="docCookies.setItem('idform', 'formulario-footer-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
