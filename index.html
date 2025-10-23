@@ -674,7 +674,7 @@
         <button onclick="docCookies.setItem('idform', 'formulario-footer-form'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-form'});" class="btn-black btn-protegete" data-click2call="7"><span>PROTÉGETE AHORA</span></button>
       </div>
     </div>
-    <div class="footer-top">
+    <div class="footer-top" style="margin-top: 30px;">
       <div class="logos-section">
         <div class="logos">
           <img src="assets/img/logo-becall.png" alt="logo becall" />
