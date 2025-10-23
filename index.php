@@ -612,7 +612,7 @@
   </div>
   
   <!-- Sección móvil con fondo azul para el botón - FUERA del banner-app -->
-  <div class="hidden-lg" style="background-color: #0057A7; padding: 20px; text-align: center; margin-top: -1px;">
+  <div class="hidden-lg" style="background-color: #0057A7; padding: 30px 20px; text-align: center; margin-top: -1px;">
     <button onclick="docCookies.setItem('idform', 'formulario-appadt'); document.getElementById('formulario-principal').scrollIntoView({ behavior: 'smooth' }); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-appadt'});" class="btn-primary btn-protegete" data-click2call="6" style="background-color: white !important; color: #0057A7 !important; border: 2px solid white !important;">INFÓRMATE AQUÍ</button>
   </div>
 
