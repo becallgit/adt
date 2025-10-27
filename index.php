@@ -218,8 +218,8 @@
   <div class="proteccion">
     <p class="porque">¿Por qué elegir ADT?</p>
     <p class="segundop">
-      La diferencia entre sonar una alarma y estar protegido.
-      <strong>ADT te ofrece seguridad real</strong>
+      La tranquilidad de saber que todo está bajo control.
+      <strong>ADT protección 24/7</strong>
     </p>
     <br />
     <br />
@@ -613,7 +613,7 @@
         alt="Seguridad Integral"
         class="sgint" />
       <div class="integral-content">
-        <h2>SEGURIDAD INTEGRAL</h2>
+        <h2>SEGURIDAD INTELIGENTE</h2>
         <p>
           Un sistema que protege tu hogar las 24 horas con respuesta inmediata
           y aviso a policía y emergencias.
