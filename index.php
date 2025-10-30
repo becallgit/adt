@@ -306,7 +306,7 @@
 
   <div class="titulo2">
     <!-- <img src="assets/img/titulo2-2.png" alt="titulo2" /> -->
-    <p>Elije ADT</p>
+    <p>ADT Smart Security</p>
     <span>seguridad premium al mejor precio</span>
   </div>
 
@@ -371,7 +371,7 @@
             src="assets/img/camara-seguridad.icon.png"
             alt="icono cámara" 
             style="margin-top: -10px !important;" />
-          <p style="margin-bottom: 5px !important;">Suma videointeligencia y controla tu casa en tiempo real.</p>
+          <p style="margin-bottom: 5px !important;">Suma videointeligencia y controla tu hogar o negocio en tiempo real.</p>
           <ul class="serv-list">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
@@ -408,12 +408,8 @@
             src="assets/img/adt_conectividad.png"
             alt="icono help" 
             style="margin-top: -10px !important;" />
-          <p style="margin-bottom: 5px !important;">Disfruta de mayor comodidad en tu vivienda.</p>
+          <p style="margin-bottom: 5px !important;">Disfruta de mayor comodidad en tu hogar o negocio.</p>
           <ul class="serv-list">
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Comodidad y ahorro con el Termostato inteligente, con ajuste automático y control desde tu móvil.
-            </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
               Control de la iluminación con encendido y apagado de luces programable.
@@ -499,7 +495,7 @@
             src="assets/img/camara-seguridad.icon.png"
             alt="icono cámara" 
             style="margin-top: -10px !important;" />
-          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: -45px !important; line-height: 1.2 !important; font-size: 18px !important;">Suma videointeligencia y controla tu casa en tiempo real.</p>
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: -45px !important; line-height: 1.2 !important; font-size: 18px !important;">Suma videointeligencia y controla tu hogar o negocio en tiempo real.</p>
           <ul class="serv-list" style="margin: 0 !important; margin-top: -10px !important; padding: 0 !important; list-style: none !important; color: #000 !important;">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
@@ -537,15 +533,11 @@
             src="assets/img/adt_conectividad.png"
             alt="icono help" 
             style="margin-top: -10px !important;" />
-          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: -45px !important; line-height: 1.2 !important; font-size: 18px !important;">Disfruta de mayor comodidad en tu vivienda.</p>
+          <p style="margin: 0 !important; padding: 0 !important; margin-bottom: -45px !important; line-height: 1.2 !important; font-size: 18px !important;">Disfruta de mayor comodidad en tu hogar o negocio.</p>
           <ul class="serv-list" style="margin: 0 !important; margin-top: -10px !important; padding: 0 !important; list-style: none !important; color: #000 !important;">
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Comodidad y ahorro con el Termostato inteligente, con ajuste automático y control desde tu móvil.
-            </li>
-            <li>
-              <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-              Control de la iluminación con encendido y apagado de luces programable.
+            Control de la iluminación con encendido y apagado de luces programable.
             </li>
             <li>
               <img src="assets/img/adt-mini-ckeck.png" alt="check" />
@@ -573,7 +565,7 @@
     <div class="banner-text">
       <p style="color: #245FA4; font-size: 29px !important;" class="banner-title">
         <strong>Con nuestra App ADT Smart Security-</strong>
-        Tu hogar en tu mano
+        tu hogar o negocio en tu mano
       </p>
       <ul class="list-app" style="font-size: 0.7em !important;">
         <li>
@@ -615,7 +607,7 @@
       <div class="integral-content">
         <h2>SEGURIDAD INTELIGENTE</h2>
         <p>
-          Un sistema que protege tu hogar las 24 horas con respuesta inmediata
+          Un sistema que protege tu hogar o negocio las 24 horas con respuesta inmediata
           y aviso a policía y emergencias.
         </p>
         <ul class="list-integral">
@@ -629,7 +621,7 @@
           </li>
           <li>
             <img src="assets/img/adt-mini-ckeck.png" alt="check" />
-            Programación de encentido y apagado de electrodomésticos
+            Detección de inhibición y comunicación multivía.
           </li>
           <li>
             <img src="assets/img/adt-mini-ckeck.png" alt="check" /> Gestión
@@ -708,7 +700,7 @@
         <p class="c2c-title" style="margin: 0; font-size: 18px; font-weight: bold; text-transform: uppercase; color: white; font-family: 'Roboto Condensed', sans-serif;">Instalación GRATUITA</p>
       </div>
       
-      <!-- Sección azul con precio -->
+          <!-- Sección azul con precio -->
       <div style="background-color: #245fa4; padding: 15px; position: relative;">
         <!-- Precio principal -->
         <div style="text-align: center; margin-bottom: 8px;">
