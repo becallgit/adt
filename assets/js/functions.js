@@ -101,6 +101,8 @@ function makeClick2Call(telefono, checked, type, click2callId) {
                 url += 'fclid=' + docCookies.getItem('adt_fclid') + '&';
             if (docCookies.hasItem('adId'))
                 url += 'adId=' + docCookies.getItem('adId') + '&';
+            if (docCookies.hasItem('adt_keyword'))
+                url += 'keyword=' + docCookies.getItem('adt_keyword') + '&';
             
             // Agregar servicio
             let servicio = docCookies.getItem('adt_servicio') || '';
