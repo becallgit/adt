@@ -66,16 +66,10 @@
    
   <div class="hidden-xs" style="background: #000; position: fixed; right: 10px; top: 50%; z-index: 99999;border-radius:50px; padding: 5px 30px;">
     <div class="row">
-      <div class="col-xs-6 text-center w-50 px-3 border-right">
+      <div class="col-xs-12 text-center px-3">
         <a href="tel:919443678">
           <img src="assets/img/telf.png" alt="" style="height: 25px"><br>
           <small class="text-white">Llámanos</small>
-        </a>
-      </div>
-      <div class="col-xs-6 text-center w-50 px-3">
-        <a href="https://wa.me/34694279761" target="_blank" rel="noopener noreferrer">
-          <img src="assets/img/whatss.png" alt="" style="height: 25px"><br>
-          <small class="text-white">Escríbenos</small>
         </a>
       </div>
     </div>
@@ -640,16 +634,10 @@
   <div class="footer">
     <div class="hidden-lg social-media-footer">
       <div class="row">
-        <div class="col-xs-6 text-center w-50 px-3 border-right">
+        <div class="col-xs-12 text-center px-3">
           <a href="tel:919443678">
             <img src="assets/img/telf.png" alt="" style="height: 25px"><br>
             <small class="text-white">Llámanos</small>
-          </a>
-        </div>
-        <div class="col-xs-6 text-center w-50 px-3">
-          <a href="https://wa.me/34694279761" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/whatss.png" alt="" style="height: 25px"><br>
-            <small class="text-white">Escríbenos</small>
           </a>
         </div>
       </div>

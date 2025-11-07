@@ -1879,6 +1879,18 @@
     visibility: visible !important;
   }
   
+  /* Media query específico para 390px - Tamaño de fuente del texto del formulario */
+  @media (min-width: 390px) and (max-width: 390px) {
+    .figma-form-title {
+      font-size: 23px !important;
+    }
+    
+    /* Botón del footer móvil */
+    .large-footer-movil {
+      font-size: 15px !important;
+    }
+  }
+  
   .figma-form-field {
     order: 3 !important;
     width: 100% !important;
