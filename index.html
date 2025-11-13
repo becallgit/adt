@@ -5,7 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ALARMAS ADT</title>
-  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/logo.png?v=2" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/logo.png?v=2" />
+  <link rel="shortcut icon" type="image/png" href="/assets/img/logo.png?v=2" />
+  <link rel="apple-touch-icon" href="/assets/img/logo.png?v=2" />
 
   <link href="assets/css/bootstrap-v4.5.3.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/estilos.css" />
