@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ALARMAS ADT</title>
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
 
   <link href="assets/css/bootstrap-v4.5.3.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/estilos.css" />
