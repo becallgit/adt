@@ -615,34 +615,8 @@
     </div>
   </div>
 
-  <div class="mobile-mini-form-spacer hidden-lg"></div>
   <div class="mobile-mini-form hidden-lg">
-    <p class="mobile-mini-form-title">¿Lo prefieres? Te llamamos</p>
-    <div class="mobile-mini-form-fields">
-      <input
-        type="tel"
-        id="c2c-phone-footer-mobile"
-        class="mobile-mini-form-input"
-        placeholder="Teléfono"
-        pattern="[0-9]*"
-        inputmode="numeric"
-        required />
-      <button
-        type="button"
-        class="mobile-mini-form-button"
-        onclick="docCookies.setItem('idform', 'formulario-footer-mobile'); makeClick2Call($('#c2c-phone-footer-mobile').val(), $('#c2c-checkbox-footer-mobile').is(':checked'), '-footer-mobile', 1); fbq('trackCustom', 'LeadOfertaAlarma', {idform: 'formulario-footer-mobile'});">
-        Te llamamos
-      </button>
-    </div>
-    <label for="c2c-checkbox-footer-mobile" class="mobile-mini-form-privacy" style="color: #fff;">
-      <input id="c2c-checkbox-footer-mobile" type="checkbox" />
-      <span>Acepto la <span id="privacidad-modal-footer-mobile" class="figma-privacy-link footer-privacy-link-mobile">Política de Privacidad</span></span>
-    </label>
-  </div>
-
-  <div class="mobile-mini-form-spacer hidden-lg"></div>
   <div class="mobile-mini-form hidden-lg">
-    <p class="mobile-mini-form-title">¿Lo prefieres? Te llamamos</p>
     <div class="mobile-mini-form-fields">
       <input
         type="tel"
