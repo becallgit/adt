@@ -354,6 +354,10 @@ button:disabled {
     width: 24px;
     height: 24px;
   }
+
+.card {
+  text-align: center;
+}
   
   .header {
     padding: 10px 16px;
@@ -1781,7 +1785,7 @@ button:disabled {
   position: relative;
   background-color: #245FA4;
   /* Color de fondo gris claro */
-  padding: 100px 20px 0 20px;
+  padding: 100px 20px 140px 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -1884,6 +1888,198 @@ button:disabled {
   height: auto;
   margin-right: auto;
   margin-left: 0;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-mini-form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #245FA4;
+  color: #fff;
+  padding: 16px 20px;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-mini-form-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mobile-mini-form-fields {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.mobile-mini-form-input {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.mobile-mini-form-input:focus {
+  outline: 2px solid #00b3ff;
+}
+
+.mobile-mini-form-button {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.mobile-mini-form-button:focus {
+  outline: 2px solid #fff;
+}
+
+.mobile-mini-form-privacy {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  column-gap: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  width: 100%;
+  padding: 0 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  text-align: left;
+  color: #fff;
+}
+
+.mobile-mini-form-privacy input {
+  margin-top: 2px;
+}
+
+.mobile-mini-form-privacy span {
+  color: #fff;
+}
+
+.mobile-mini-form-privacy .figma-privacy-link,
+.mobile-mini-form-privacy-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #fff !important;
+}
+
+.footer-privacy-link-mobile {
+  color: #fff !important;
+}
+
+.mobile-mini-form-privacy-text {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
+.mobile-mini-form-spacer {
+  height: 140px;
+  background-color: #245FA4;
+  width: 100%;
+}
+
+.mobile-mini-form-msg {
+  font-size: 12px;
+  margin: 0;
+  min-height: 16px;
+}
+
+#servicios-mobile {
+  background-color: #F5F5F5;
+  padding: 20px 12px 30px;
+  margin: 30px auto 10px;
+  width: 100%;
+  max-width: 520px;
+  border-top: 4px solid #ffffff;
+}
+
+#servicios-mobile {
+  background-color: #F5F5F5;
+  padding: 20px 12px 30px;
+  margin: 30px auto 10px;
+  width: 100%;
+  max-width: 420px;
+  border-top: 4px solid #ffffff;
+}
+
+.servicios-mobile-carousel {
+  width: 100%;
+}
+
+#servicios-mobile .owl-stage-outer {
+  overflow: hidden;
+}
+
+.servicios-mobile-carousel .owl-stage {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.servicios-mobile-carousel .owl-item {
+  float: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 10px 0;
+}
+
+#servicios-mobile .owl-dots {
+  margin-top: 8px !important;
+  padding-bottom: 20px !important;
+}
+
+#servicios-mobile .owl-dot span {
+  background: #ccc !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+#servicios-mobile .owl-dot.active span {
+  background: #245FA4 !important;
+  transform: scale(1.2);
+}
+
+#servicios-mobile .serv-card {
+  width: calc(100% - 32px) !important;
+  max-width: 340px !important;
+  margin: 0 auto 25px !important;
+  height: auto !important;
+  min-height: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+#servicios-mobile .serv-list {
+  min-height: auto !important;
+}
+
+#servicios-mobile .servicios-mobile-carousel .owl-item {
+  min-height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .hidden-xs {
+    display: none !important;
+  }
 }
 
 

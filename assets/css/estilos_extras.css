@@ -2109,13 +2109,13 @@
     margin-bottom: 20px !important;
     padding: 15px 20px !important;
     box-sizing: border-box !important;
-    text-align: left !important;
+    text-align: center !important;
   }
   
   .cards-mobile .card h4 {
     margin-top: 10px !important;
     margin-bottom: 8px !important;
-    text-align: left !important;
+    text-align: center !important;
     font-size: 24px !important;
     font-weight: 700 !important;
     color: #245FA4 !important;
@@ -2123,19 +2123,19 @@
   
   .cards-mobile .card p {
     margin-bottom: 8px !important;
-    text-align: left !important;
+    text-align: center !important;
     font-size: 16px !important;
     line-height: 1.4 !important;
   }
   
   .cards-mobile .card .destacado {
     margin-top: 5px !important;
-    text-align: left !important;
+    text-align: center !important;
     font-size: 18px !important;
     font-weight: 600 !important;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    align-self: flex-start !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-self: center !important;
     display: block !important;
     width: auto !important;
     color: #245FA4 !important;
