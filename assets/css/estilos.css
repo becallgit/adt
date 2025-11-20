@@ -1901,7 +1901,7 @@ button:disabled {
   width: 100%;
   background: #245FA4;
   color: #fff;
-  padding: 16px 20px;
+  padding: 16px 26px;
   box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.25);
   z-index: 1100;
   display: flex;
@@ -2029,13 +2029,15 @@ button:disabled {
 .servicios-mobile-carousel .owl-stage {
   display: flex !important;
   justify-content: center !important;
+  padding-left: 20px !important;
+  padding-right: 58px !important;
 }
 
 .servicios-mobile-carousel .owl-item {
   float: none !important;
   display: flex !important;
   justify-content: center !important;
-  padding: 10px 0;
+  padding: 10px 18px;
 }
 
 #servicios-mobile .owl-dots {

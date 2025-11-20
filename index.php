@@ -195,7 +195,7 @@
   <div id="servicios-mobile" class="servicios-mobile hidden-lg">
     <div class="servicios-mobile-carousel owl-carousel owl-theme">
       <!-- CARD 1 -->
-      <div class="serv-card" style="width: 320px !important; height: 850px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 auto 15px auto !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+      <div class="serv-card" style="width: 320px !important; height: 920px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 auto 15px auto !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
         <h3 style="margin: 0 !important; padding: 12px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">SEGURIDAD</h3>
         <img class="serv-photo" src="assets/img/fondo-segurida.png" alt="protección hogar" style="width: 100% !important; height: 120px !important; object-fit: cover !important; margin: 0 !important;" />
         <div class="content" style="padding: 20px !important; text-align: left !important;">
@@ -215,7 +215,7 @@
       </div>
 
       <!-- CARD 2 -->
-      <div class="serv-card" style="width: 320px !important; height: 850px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 auto 15px auto !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+      <div class="serv-card" style="width: 320px !important; height: 920px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 auto 15px auto !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
         <h3 style="margin: 0 !important; padding: 12px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">VÍDEO INTELIGENCIA</h3>
         <img class="serv-photo" src="assets/img/fondo-vigilancia.png" alt="protección negocio" style="width: 100% !important; height: 120px !important; object-fit: cover !important; margin: 0 !important;" />
         <div class="content" style="padding: 20px !important; text-align: left !important;">
@@ -233,7 +233,7 @@
       </div>
 
       <!-- CARD 3 -->
-      <div class="serv-card" style="width: 320px !important; height: 850px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 auto 15px auto !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
+      <div class="serv-card" style="width: 320px !important; height: 920px !important; background: #F5F5F5 !important; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important; border-radius: 12px !important; margin: 0 auto 15px auto !important; padding: 0 !important; text-align: left !important; overflow: hidden !important;">
         <h3 style="margin: 0 !important; padding: 12px 16px !important; font-size: 22px !important; font-weight: 700 !important; color: #FFFFFF !important; background-color: #245FA4 !important; border-top-left-radius: 12px !important; border-top-right-radius: 12px !important; text-align: center !important;">CONECTIVIDAD</h3>
         <img class="serv-photo" src="assets/img/fondo_domotica.png" alt="ADT Help" style="width: 100% !important; height: 120px !important; object-fit: cover !important; margin: 0 !important;" />
         <div class="content" style="padding: 20px !important; text-align: left !important;">
