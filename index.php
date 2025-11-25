@@ -129,11 +129,17 @@
 
       <!-- CTA Principal -->
       <div class="cta figma-form" id="formulario-principal">
-        <!-- Imagen solo en desktop -->
-        <img src="assets/img/formulario-adt.png" alt="Formulario adt" class="hidden-xs" />
+        <!-- Imagen solo en escritorio -->
+        <img src="assets/img/formulario-adt.png" alt="Formulario adt" class="only-desktop" />
+        
+        <!-- Mensajes exclusivos para móvil -->
+        <div class="hidden-lg" style="text-align: center; margin-bottom: 15px;">
+          <p style="color: #000; font-weight: bold; font-size: 30px; margin-bottom: 6px; font-family: 'Roboto Condensed', sans-serif;">Instalación GRATUITA</p>
+          <p style="color: #245FA4; font-weight: bold; font-size: 29px; margin: 0; font-family: 'Roboto Condensed', sans-serif;">App Móvil y Monitorización 24/7</p>
+        </div>
         
         <!-- Título principal según Figma -->
-        <h2 class="figma-form-title">¡Contrata Ahora!</h2>
+        <h2 class="figma-form-title only-desktop">¡Contrata Ahora!</h2>
         
         <!-- Subtítulo según Figma -->
         <p class="figma-form-subtitle">¿Lo prefieres? Te llamamos</p>
@@ -615,9 +621,7 @@
     </div>
   </div>
 
-  <div class="mobile-mini-form-spacer hidden-lg"></div>
   <div class="mobile-mini-form hidden-lg">
-    <p class="mobile-mini-form-title">¿Lo prefieres? Te llamamos</p>
     <div class="mobile-mini-form-fields">
       <input
         type="tel"
@@ -640,9 +644,7 @@
     </label>
   </div>
 
-  <div class="mobile-mini-form-spacer hidden-lg"></div>
   <div class="mobile-mini-form hidden-lg">
-    <p class="mobile-mini-form-title">¿Lo prefieres? Te llamamos</p>
     <div class="mobile-mini-form-fields">
       <input
         type="tel"
@@ -698,6 +700,11 @@
         <!-- Duración -->
         <div style="text-align: center;">
           <span style="color: white; font-size: 16px; font-weight: bold; text-transform: uppercase; font-family: 'Roboto Condensed', sans-serif;">DURANTE 4 MESES</span>
+        </div>
+        
+        <!-- Texto después del precio -->
+        <div style="text-align: center; margin-top: 4px;">
+          <span style="color: white; font-size: 12px; font-family: 'Roboto Condensed', sans-serif;">Después desde 42,35 €/mes IVA incl.</span>
         </div>
         
         <!-- Línea separadora inferior -->
